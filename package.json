@@ -1,0 +1,58 @@
+{
+  "name": "ubisoft-api",
+  "version": "0.0.1",
+  "description": "A handy package to extract Data from Ubisoft services by reverse-engineering their public web APIs.",
+  "main": "dist/ubisoft.js",
+  "scripts": {
+    "build": "npm run format && tsc --build --clean && tsc --build",
+    "format": "prettier --config .prettierrc --write \"src/**/*.ts\"",
+    "start": "ts-node ./examples/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Scrip7/ubisoft-api.git"
+  },
+  "keywords": [
+    "ubisoft",
+    "uplay",
+    "api",
+    "siege",
+    "r6siege",
+    "rainbow",
+    "connect",
+    "bot",
+    "client"
+  ],
+  "author": "Hooman Hassanzadeh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Scrip7/ubisoft-api/issues"
+  },
+  "homepage": "https://github.com/Scrip7/ubisoft-api#readme",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "lodash": "^4.17.20",
+    "lowdb": "^1.0.0",
+    "pupa": "^2.1.1",
+    "uuid": "^8.3.1"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.165",
+    "@types/node": "^14.14.7",
+    "@types/uuid": "^8.3.0",
+    "prettier": "^2.1.2",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.5"
+  },
+  "prettier": {
+    "parser": "typescript",
+    "tabWidth": 2,
+    "useTabs": true,
+    "singleQuote": true,
+    "semi": true,
+    "printWidth": 120,
+    "trailingComma": "all",
+    "endOfLine": "lf",
+    "arrowParens": "avoid"
+  }
+}
