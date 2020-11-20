@@ -8,7 +8,7 @@ A handy package to extract Data from Ubisoft services by reverse-engineering the
 - [Installation](#️-installation)
 - [Configuration](#-configuration)
 - [Examples](#-examples)
-    - [Using proxy](#-using-proxy)
+    - [Using proxy](#using-proxy)
 - [Useful resources](#-useful-resources)
 - [Contacts](#-contacts)
 
@@ -76,7 +76,7 @@ Placeholder text.
 
 
 ### 📞 Contacts
-If you have any question regarding to this package, feel free to be in touch with me!
+If you have any questions regarding this package, feel free to be in touch with me!
 
 Discord: `Script#0001`
 
