@@ -2,15 +2,15 @@
 A handy package to extract Data from Ubisoft services by reverse-engineering their public web APIs.
 
 ## 📋 Table of contents
-- [📝 Introduction](#-introduction)
-- [🚀 Features](#-features)
-- [💪🏻 Supported Games](#-supported-games)
-- [⬇️ Installation](#️-installation)
-- [🔧 Configuration](#-configuration)
-- [📖 Examples](#-examples)
-    - [🔁 Using proxy](#-using-proxy)
-- [🔗 Useful resources](#-useful-resources)
-- [📞 Contacts](#-contacts)
+- [Introduction](#-introduction)
+- [Features](#-features)
+- [Supported Games](#-supported-games)
+- [Installation](#️-installation)
+- [Configuration](#-configuration)
+- [Examples](#-examples)
+    - [Using proxy](#-using-proxy)
+- [Useful resources](#-useful-resources)
+- [Contacts](#-contacts)
 
 ### 📝 Introduction
 Before using this package, you should know that Ubisoft **does not** provide any official API for developers!
@@ -66,7 +66,7 @@ Placeholder text.
 Placeholder text.
 
 
-#### 🔁 Using proxy
+#### Using proxy
 Placeholder text.
 
 
