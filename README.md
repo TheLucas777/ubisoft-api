@@ -44,7 +44,7 @@ There are multiple **third-party** non-open source websites/services out there t
 ### 🚀 Features
 - Includes [TypeScript](https://www.typescriptlang.org/) definitions
 - Supports multiple Ubisoft accounts (multiple sessions)
-- Supports proxy
+- Supports HTTP or HTTPS proxy for outgoing requests
 - Search Ubisoft profiles (by username, profile id, user id, etc...)
 - Check Ubisoft username availability
 - Get users profile picture in different sizes
@@ -82,7 +82,16 @@ const ubisoft = new Ubisoft({
         },
         // Optional: Add more Ubisoft accounts...
     ],
-    sessionPath: __dirname + '/sessions.json'
+    sessionPath: __dirname + '/sessions.json',
+
+    /**
+     * Optional:
+     *  Pass HTTP or HTTPS proxy server for outgoing requests
+     * 
+     * Example:
+     *  http(s)://user:pass@host:port
+     */
+    // proxy: '',
 });
 ```
 
