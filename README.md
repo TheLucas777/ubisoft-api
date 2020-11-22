@@ -8,7 +8,7 @@ A handy package to extract Data from Ubisoft services by reverse-engineering the
 - [Configuration](#-configuration)
 - [Examples](#-examples)
     - [Search Ubisoft profiles](#search-ubisoft-profiles)
-    - [Rainbow Six: Siege stats](#)
+    - [Rainbow Six: Siege stats](#rainbow-six-siege-stats)
 - [Useful resources](#-useful-resources)
 - [Contacts](#-contacts)
 
@@ -21,9 +21,13 @@ The answer is simple; I fetch data by reverse engineering Ubisoft APIs (Which do
 
 To access this data, you must provide some Ubisoft accounts (email and password) to authenticate and work with Ubisoft APIs.
 
-> Do not use your primary Ubisoft account. We take no responsibility for anything that might happen to given accounts in the future.
+> **Do not** use your primary Ubisoft account.
+> 
+> If you **improperly** use API calls, your account might get a temporary penalty or permanent ban.
+> 
+> We strongly recommend that you create a new fake account, and we take no responsibility for anything that might happen to given accounts in the future.
 
-The Ubisoft APIs we use in this package are not stable. Your application might suddenly break, if Ubisoft changes something in the future, so you must always keep your application up-to-date.
+The Ubisoft APIs that we use in this package **are not stable**. Your application might suddenly break if Ubisoft changes something in the future, so you must always keep your application up-to-date.
 
 There are multiple **third-party** non-open source websites/services out there that provide APIs related to Ubisoft services. For several reasons, we advise you not to use them:
 - It is wrong to build an application that relies heavily on many third-party services.
@@ -81,6 +85,9 @@ const ubisoft = new Ubisoft({
 ### 📖 Examples
 
 #### Search Ubisoft profiles
+> You can search **up to 50** Ubisoft profiles in a single call. 
+> 
+> Please note that this restriction is set by Ubisoft and may change in the future.
 ```JavaScript
 /**
  * ===========================
@@ -112,11 +119,22 @@ ubisoft.searchByProfileId('4503086f-112e-41b6-bdbf-1c682596bab3')
         console.log(profiles.toArray());
     })
 ```
-> ⚠️ **Note:** 
-> 
+Output:
+```JSON
+[
+  {
+    id: "4503086f-112e-41b6-bdbf-1c682596bab3",
+    userId: "4503086f-112e-41b6-bdbf-1c682596bab3",
+    name: "Sub.Script",
+    platform: "uplay",
+    platformId: "4503086f-112e-41b6-bdbf-1c682596bab3"
+  }
+]
+```
+
 > Just because you got some results after searching profiles, it does not mean that you will always receive "game stats" for all the available games. 
 > 
-> In fact, if the found profiles don't own the game or have never played the game before, most likely Ubisoft will return an empty response then you will get an error.
+> In fact, if the profiles don't own the game or have never played the game before, most likely Ubisoft will return an empty response then you will get an error.
 > 
 > For example, if you request to get Siege information for profile A, most likely you'll receive an error or an empty response if that profile does not own the game or has never played it before.
 > 
@@ -125,17 +143,35 @@ ubisoft.searchByProfileId('4503086f-112e-41b6-bdbf-1c682596bab3')
 
 #### Rainbow Six: Siege stats
 
-
+Siege Progress:
 ```JavaScript
-// Get progression
-ubisoft.searchByUsername('uplay', ['Sub.Script', 'Beaulo.TSM'])
+ubisoft.searchByUsername('uplay', 'Sub.Script')
     .then((profiles) => {
-
         profiles.siege.progress().then(data => {
-			console.log(data.toArray());
+            console.log(data.first());
         })
-        
     })
+```
+Output:
+```JSON
+{
+  profile: {
+    id: "4503086f-112e-41b6-bdbf-1c682596bab3",
+    userId: "4503086f-112e-41b6-bdbf-1c682596bab3",
+    name: "Sub.Script",
+    platform: "uplay",
+    platformId: "4503086f-112e-41b6-bdbf-1c682596bab3"
+  },
+  progress: {
+    alphapack: 4.6,
+    xp: {
+      level: 564,
+      current: 58656,
+      max: 273500,
+      percentage: 21.45
+    }
+  }
+}
 ```
 
 
