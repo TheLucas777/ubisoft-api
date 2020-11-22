@@ -69,7 +69,7 @@ $ yarn add ...
 We highly recommend you to use [TypeScript](https://www.typescriptlang.org/) instead of CommonJS.
 ```JavaScript
 // CommonJS
-// const ubisoft = require('...');
+// const Ubisoft = require('...');
  
 // ES6
 import Ubisoft from '...';
@@ -137,13 +137,15 @@ Output:
 ]
 ```
 
-> Just because you got some results after searching profiles, it does not mean that you will always receive "game stats" for all the available games. 
+Just because you got some results after searching profiles, it does not mean that you will always receive "game stats" for all the available games. 
+
+In fact, if the profiles don't own the game or have never played the game before, most likely Ubisoft will return an empty response then you will get an error.
+
+> For example:
 > 
-> In fact, if the profiles don't own the game or have never played the game before, most likely Ubisoft will return an empty response then you will get an error.
-> 
-> For example, if you request to get Siege information for profile A, most likely you'll receive an error or an empty response if that profile does not own the game or has never played it before.
-> 
-> So, I highly recommend you to validate the responses after each call.
+> If you request to get Siege information for a profile, you'll likely receive an error or an empty response if that profile does not own the Siege or has never played it before.
+
+So, I highly recommend you to validate the responses after each call.
 
 
 #### Rainbow Six: Siege stats
