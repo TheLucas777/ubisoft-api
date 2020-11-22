@@ -123,11 +123,11 @@ Output:
 ```JSON
 [
   {
-    id: "4503086f-112e-41b6-bdbf-1c682596bab3",
-    userId: "4503086f-112e-41b6-bdbf-1c682596bab3",
-    name: "Sub.Script",
-    platform: "uplay",
-    platformId: "4503086f-112e-41b6-bdbf-1c682596bab3"
+    "id": "4503086f-112e-41b6-bdbf-1c682596bab3",
+    "userId": "4503086f-112e-41b6-bdbf-1c682596bab3",
+    "name": "Sub.Script",
+    "platform": "uplay",
+    "platformId": "4503086f-112e-41b6-bdbf-1c682596bab3"
   }
 ]
 ```
@@ -155,20 +155,20 @@ ubisoft.searchByUsername('uplay', 'Sub.Script')
 Output:
 ```JSON
 {
-  profile: {
-    id: "4503086f-112e-41b6-bdbf-1c682596bab3",
-    userId: "4503086f-112e-41b6-bdbf-1c682596bab3",
-    name: "Sub.Script",
-    platform: "uplay",
-    platformId: "4503086f-112e-41b6-bdbf-1c682596bab3"
+  "profile": {
+    "id": "4503086f-112e-41b6-bdbf-1c682596bab3",
+    "userId": "4503086f-112e-41b6-bdbf-1c682596bab3",
+    "name": "Sub.Script",
+    "platform": "uplay",
+    "platformId": "4503086f-112e-41b6-bdbf-1c682596bab3"
   },
-  progress: {
-    alphapack: 4.6,
-    xp: {
-      level: 564,
-      current: 58656,
-      max: 273500,
-      percentage: 21.45
+  "progress": {
+    "alphapack": 4.6,
+    "xp": {
+      "level": 564,
+      "current": 58656,
+      "max": 273500,
+      "percentage": 21.45
     }
   }
 }
