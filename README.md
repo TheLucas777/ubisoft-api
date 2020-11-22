@@ -1,4 +1,3 @@
-# ubisoft-api
 A handy package to extract Data from Ubisoft services by reverse-engineering their public web APIs.
 
 ## 📋 Table of contents
@@ -8,7 +7,8 @@ A handy package to extract Data from Ubisoft services by reverse-engineering the
 - [Installation](#️-installation)
 - [Configuration](#-configuration)
 - [Examples](#-examples)
-    - [Using proxy](#using-proxy)
+    - [Search Ubisoft profiles](#search-ubisoft-profiles)
+    - [Rainbow Six: Siege stats](#)
 - [Useful resources](#-useful-resources)
 - [Contacts](#-contacts)
 
@@ -21,8 +21,7 @@ The answer is simple; I fetch data by reverse engineering Ubisoft APIs (Which do
 
 To access this data, you must provide some Ubisoft accounts (email and password) to authenticate and work with Ubisoft APIs.
 
-⚠️ **Note:**
-Do not use your primary Ubisoft account. We take no responsibility for anything that might happen to given accounts in the future.
+> Do not use your primary Ubisoft account. We take no responsibility for anything that might happen to given accounts in the future.
 
 The Ubisoft APIs we use in this package are not stable. Your application might suddenly break, if Ubisoft changes something in the future, so you must always keep your application up-to-date.
 
@@ -36,11 +35,11 @@ There are multiple **third-party** non-open source websites/services out there t
 
 ### 🚀 Features
 - Includes TypeScript definitions
-- Supports multiple Ubisoft accounts (sessions)
+- Supports multiple Ubisoft accounts (multiple sessions)
 - Supports proxy
 - Search Ubisoft profiles (username, profileId, userId, etc...)
 - Check Ubisoft username availability
-- Get users profile pictures in different sizes
+- Get users profile picture in different sizes
 
 
 ### 💪🏻 Supported Games
@@ -59,15 +58,85 @@ $ yarn add ...
 ```
 
 ### 🔧 Configuration
-Placeholder text.
+We highly recommend you to use TypeScript instead of CommonJS.
+```JavaScript
+// CommonJS
+// const ubisoft = require('...');
+ 
+// ES6
+import Ubisoft from '...';
 
+const ubisoft = new Ubisoft({
+    accounts: [
+        {
+            email: '...',
+            password: '...'
+        },
+        // Optional: Add more Ubisoft accounts...
+    ],
+    sessionPath: __dirname + '/sessions.json'
+});
+```
 
 ### 📖 Examples
-Placeholder text.
+
+#### Search Ubisoft profiles
+```JavaScript
+/**
+ * ===========================
+ * Search profiles by username
+ * ===========================
+ */
+
+ubisoft.searchByUsername('uplay', 'Sub.Script')
+    // .searchByUsername('uplay', ['Sub.Script', 'Beaulo.TSM'])
+    .then((profiles) => {
+        console.log(profiles.toArray());
+    })
 
 
-#### Using proxy
-Placeholder text.
+/**
+ * ============================
+ * Search profiles by profileId
+ * ============================
+ */
+ubisoft.searchByProfileId('4503086f-112e-41b6-bdbf-1c682596bab3')
+    /*
+    .searchByProfileId('uplay', [
+        '4503086f-112e-41b6-bdbf-1c682596bab3' // Sub.Script
+        '3cc51897-49c4-45f6-af9d-66507b8ef0e1' // Beaulo.TSM
+        '36e684d7-5a57-42df-9b00-1c60e7c91f28' // Achieved.TSM
+    ])
+    */
+    .then((profiles) => {
+        console.log(profiles.toArray());
+    })
+```
+> ⚠️ **Note:** 
+> 
+> Just because you got some results after searching profiles, it does not mean that you will always receive "game stats" for all the available games. 
+> 
+> In fact, if the found profiles don't own the game or have never played the game before, most likely Ubisoft will return an empty response then you will get an error.
+> 
+> For example, if you request to get Siege information for profile A, most likely you'll receive an error or an empty response if that profile does not own the game or has never played it before.
+> 
+> So, I highly recommend you to validate the responses after each call.
+
+
+#### Rainbow Six: Siege stats
+
+
+```JavaScript
+// Get progression
+ubisoft.searchByUsername('uplay', ['Sub.Script', 'Beaulo.TSM'])
+    .then((profiles) => {
+
+        profiles.siege.progress().then(data => {
+			console.log(data.toArray());
+        })
+        
+    })
+```
 
 
 ### 🔗 Useful resources
