@@ -13,19 +13,23 @@ A handy package to extract Data from Ubisoft services by reverse-engineering the
 - [Contacts](#-contacts)
 
 ### 📝 Introduction
-Before using this package, you should know that Ubisoft **does not** provide any official API for developers!
+Before using this package, you should know that Ubisoft **does not** provide any official APIs for developers to design and develop their own third-party applications directly.
 
 So, where exactly do I get the data from?
 
-The answer is simple; I fetch data by reverse engineering Ubisoft APIs (Which does not have any documentation), format, and restructure their response and eventually return the new data to the user.
+The answer is simple; I fetch data by reverse-engineering Ubisoft web APIs (Which do not have any documentation), format, and restructure the responses and eventually return the new data to the user.
 
-To access this data, you must provide some Ubisoft accounts (email and password) to authenticate and work with Ubisoft APIs.
+To access this data, you must provide some Ubisoft accounts (at least one account) which contains email and password to authenticate and work with their APIs.
+
+Remember that two-step verification of the accounts must be **disabled**. Otherwise, this package won't work.
 
 > **Do not** use your primary Ubisoft account.
 > 
 > If you **improperly** use API calls, your account might get a temporary penalty or permanent ban.
 > 
-> We strongly recommend that you create a new fake account, and we take no responsibility for anything that might happen to given accounts in the future.
+> We strongly recommend that you **create a new fake account**.
+> 
+> **We take no responsibility** for anything that might happen to the provided accounts in the future.
 
 The Ubisoft APIs that we use in this package **are not stable**. Your application might suddenly break if Ubisoft changes something in the future, so you must always keep your application up-to-date.
 
@@ -38,10 +42,10 @@ There are multiple **third-party** non-open source websites/services out there t
 
 
 ### 🚀 Features
-- Includes TypeScript definitions
+- Includes [TypeScript](https://www.typescriptlang.org/) definitions
 - Supports multiple Ubisoft accounts (multiple sessions)
 - Supports proxy
-- Search Ubisoft profiles (username, profileId, userId, etc...)
+- Search Ubisoft profiles (by username, profile id, user id, etc...)
 - Check Ubisoft username availability
 - Get users profile picture in different sizes
 
@@ -62,7 +66,7 @@ $ yarn add ...
 ```
 
 ### 🔧 Configuration
-We highly recommend you to use TypeScript instead of CommonJS.
+We highly recommend you to use [TypeScript](https://www.typescriptlang.org/) instead of CommonJS.
 ```JavaScript
 // CommonJS
 // const ubisoft = require('...');
@@ -85,9 +89,10 @@ const ubisoft = new Ubisoft({
 ### 📖 Examples
 
 #### Search Ubisoft profiles
-> You can search **up to 50** Ubisoft profiles in a single call. 
-> 
-> Please note that this restriction is set by Ubisoft and may change in the future.
+You can search **up to 50** Ubisoft profiles in a single call.
+
+> This restriction is set by Ubisoft and may change in the future.
+
 ```JavaScript
 /**
  * ===========================
