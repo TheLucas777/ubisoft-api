@@ -23,11 +23,11 @@ A handy npm package to extract data from Ubisoft services by reverse-engineering
 - [Contacts](#-contacts)
 
 ### 📝 Introduction
-Before using this package, you should know that Ubisoft **does not** provide any official APIs for developers to design and develop their own third-party applications directly.
+Before using this package, you should know that Ubisoft **does not** provide any official API for developers to design and develop their own third-party applications directly.
 
 So, where exactly do I get the data from?
 
-The answer is simple; I fetch data by reverse-engineering Ubisoft web APIs (Which do not have any documentation), format, and restructure the responses and eventually return the new data to the user.
+The answer is simple; I fetch data by reverse-engineering Ubisoft web APIs (Which obviously don't have any documentation), format, and restructure the responses and eventually return the new data to the user.
 
 To access this data, you must provide some Ubisoft accounts (at least one account) which contains email and password to authenticate and work with their APIs.
 
@@ -77,32 +77,61 @@ $ yarn add ubisoft-api
 
 ### 🔧 Configuration
 We highly recommend you to use [TypeScript](https://www.typescriptlang.org/) instead of CommonJS.
+
+CommonJS:
 ```JavaScript
-// CommonJS
-// const Ubisoft = require('ubisoft-api');
- 
-// ES6
-import Ubisoft from 'ubisoft-api';
+const { Database } = require('ubisoft-api/database')
+const { Ubisoft } = require('ubisoft-api/ubisoft');
+const db = new Database(__dirname + '/sessions.json');
+db.init().then(() => {
+    const ubisoft = new Ubisoft({
+        accounts: [
+			{
+				email: '...',
+				password: '...',
+			},
+		],
+        database: db,
+        // proxy: ''
+    });
 
-const ubisoft = new Ubisoft({
-    accounts: [
-        {
-            email: '...',
-            password: '...'
-        },
-        // Optional: Add more Ubisoft accounts...
-    ],
-    sessionPath: __dirname + '/sessions.json',
+    // Start coding here!
+})
+```
 
-    /**
-     * Optional:
-     *  Pass HTTP or HTTPS proxy server for outgoing requests
-     * 
-     * Example:
-     *  http(s)://user:pass@host:port
-     */
-    // proxy: '',
-});
+ES6: 
+```Javascript
+import { Database } from 'ubisoft-api/database';
+import { Ubisoft } from 'ubisoft-api';
+
+const db = new Database(__dirname + '/sessions.json');
+
+// Init database for storing sessions
+db.init().then(() => {
+    const ubisoft = new Ubisoft({
+        accounts: [
+            {
+                email: '...',
+                password: '...'
+            },
+            // Optional: Add more Ubisoft accounts...
+        ],
+
+        // Pass the initiated db
+        database: db,
+
+        /**
+         * Optional:
+         *  Pass HTTP or HTTPS proxy server for outgoing requests
+         * 
+         * Example:
+         *  http(s)://user:pass@host:port
+         */
+        // proxy: '',
+    });
+
+    // Start coding here!
+})
 ```
 
 ### 📖 Examples
@@ -127,9 +156,9 @@ ubisoft.searchByUsername('uplay', 'Sub.Script')
 
 
 /**
- * ============================
- * Search profiles by profileId
- * ============================
+ * =============================
+ * Search profiles by profile id
+ * =============================
  */
 ubisoft.searchByProfileId('4503086f-112e-41b6-bdbf-1c682596bab3')
     /*
@@ -143,6 +172,7 @@ ubisoft.searchByProfileId('4503086f-112e-41b6-bdbf-1c682596bab3')
         console.log(profiles.toArray());
     })
 ```
+
 Output:
 ```JSON
 [
@@ -152,6 +182,62 @@ Output:
     "name": "Sub.Script",
     "platform": "uplay",
     "platformId": "4503086f-112e-41b6-bdbf-1c682596bab3"
+  }
+]
+```
+
+**Search profiles by user id**
+
+> **Note:** By using this method, we will return an optional "connections" property.
+
+If the user has connected other platforms (like steam, twitch, etc.) to its Ubisoft account, this property will contain information.
+
+In the example below, you can see that Fabian and I connected our Steam account to our Ubisoft account.
+
+```JavaScript
+ubisoft.searchByUserId([
+        '4503086f-112e-41b6-bdbf-1c682596bab3', // Sub.Script
+        '9cf4d4a1-e328-49f8-be77-c255d6efefaa', // Fabian.Vitality
+    ])
+    .then((profiles) => {
+        console.log(profiles.toArray());
+    })
+```
+
+Output:
+```JSON
+[
+  {
+    "id": "4503086f-112e-41b6-bdbf-1c682596bab3",
+    "userId": "4503086f-112e-41b6-bdbf-1c682596bab3",
+    "name": "Sub.Script",
+    "platform": "uplay",
+    "platformId": "4503086f-112e-41b6-bdbf-1c682596bab3",
+    "connections": [
+      {
+        "id": "76561198421424406",
+        "userId": "4503086f-112e-41b6-bdbf-1c682596bab3",
+        "name": "76561198421424406",
+        "platform": "steam",
+        "platformId": "76561198421424406"
+      }
+    ]
+  },
+  {
+    "id": "9cf4d4a1-e328-49f8-be77-c255d6efefaa",
+    "userId": "9cf4d4a1-e328-49f8-be77-c255d6efefaa",
+    "name": "Fabian.Vitality",
+    "platform": "uplay",
+    "platformId": "9cf4d4a1-e328-49f8-be77-c255d6efefaa",
+    "connections": [
+      {
+        "id": "76561197989637130",
+        "userId": "9cf4d4a1-e328-49f8-be77-c255d6efefaa",
+        "name": "76561197989637130",
+        "platform": "steam",
+        "platformId": "76561197989637130"
+      }
+    ]
   }
 ]
 ```
