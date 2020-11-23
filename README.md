@@ -1,8 +1,12 @@
 A handy npm package to extract data from Ubisoft services by reverse-engineering their public web APIs.
 
 <p align="center">
-    <img alt="npm" src="https://img.shields.io/npm/dt/ubisoft-api?color=blue&logo=npm">
-    <img alt="NPM" src="https://img.shields.io/npm/l/ubisoft-api?color=blue&logo=open-source-initiative&logoColor=white">
+    <a href="https://www.npmjs.com/package/ubisoft-api" target="_blank">
+        <img alt="ubisoft-api downloads" src="https://img.shields.io/npm/dt/ubisoft-api?color=blue&logo=npm">
+    </a>
+    <a href="https://github.com/Scrip7/ubisoft-api/blob/main/LICENSE" target="_blank">
+        <img alt="ubisoft-api license" src="https://img.shields.io/npm/l/ubisoft-api?color=blue&logo=open-source-initiative&logoColor=white">
+    </a>
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/scrip7/ubisoft-api?color=blue&logo=github">
 </p>
 
