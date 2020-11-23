@@ -82,20 +82,22 @@ CommonJS:
 ```JavaScript
 const { Database } = require('ubisoft-api/database')
 const { Ubisoft } = require('ubisoft-api/ubisoft');
-const db = new Database(__dirname + '/sessions.json');
-db.init().then(() => {
-    const ubisoft = new Ubisoft({
-        accounts: [
-			{
-				email: '...',
-				password: '...',
-			},
-		],
-        database: db,
-        // proxy: ''
-    });
 
-    // Start coding here!
+const db = new Database(__dirname + '/sessions.json');
+
+db.init().then(() => {
+  const ubisoft = new Ubisoft({
+    accounts: [
+      {
+        email: '...',
+        password: '...',
+      },
+    ],
+    database: db,
+    // proxy: ''
+  });
+
+  // Start coding here!
 })
 ```
 
@@ -108,26 +110,26 @@ const db = new Database(__dirname + '/sessions.json');
 
 // Init database for storing sessions
 db.init().then(() => {
-    const ubisoft = new Ubisoft({
-        accounts: [
-            {
-                email: '...',
-                password: '...'
-            },
-            // Optional: Add more Ubisoft accounts...
-        ],
+  const ubisoft = new Ubisoft({
+    accounts: [
+      {
+        email: '...',
+        password: '...'
+      },
+      // Optional: Add more Ubisoft accounts...
+    ],
 
-        // Pass the initiated db
-        database: db,
+    // Pass the initiated db
+    database: db,
 
-        /**
-         * Optional:
-         *  Pass HTTP or HTTPS proxy server for outgoing requests
-         * 
-         * Example:
-         *  http(s)://user:pass@host:port
-         */
-        // proxy: '',
+    /**
+     * Optional:
+     *  Pass HTTP or HTTPS proxy server for outgoing requests
+     * 
+     * Example:
+     *  http(s)://user:pass@host:port
+     */
+    // proxy: '',
     });
 
     // Start coding here!
@@ -148,11 +150,12 @@ You can search **up to 50** Ubisoft profiles in a single call.
  * ===========================
  */
 
-ubisoft.searchByUsername('uplay', 'Sub.Script')
-    // .searchByUsername('uplay', ['Sub.Script', 'Beaulo.TSM'])
-    .then((profiles) => {
-        console.log(profiles.toArray());
-    })
+ubisoft
+  .searchByUsername('uplay', 'Sub.Script')
+  // .searchByUsername('uplay', ['Sub.Script', 'Beaulo.TSM'])
+  .then((profiles) => {
+    console.log(profiles.toArray());
+  })
 
 
 /**
@@ -160,17 +163,18 @@ ubisoft.searchByUsername('uplay', 'Sub.Script')
  * Search profiles by profile id
  * =============================
  */
-ubisoft.searchByProfileId('4503086f-112e-41b6-bdbf-1c682596bab3')
-    /*
-    .searchByProfileId('uplay', [
-        '4503086f-112e-41b6-bdbf-1c682596bab3' // Sub.Script
-        '3cc51897-49c4-45f6-af9d-66507b8ef0e1' // Beaulo.TSM
-        '36e684d7-5a57-42df-9b00-1c60e7c91f28' // Achieved.TSM
-    ])
-    */
-    .then((profiles) => {
-        console.log(profiles.toArray());
-    })
+ubisoft
+  .searchByProfileId('4503086f-112e-41b6-bdbf-1c682596bab3')
+  /*
+  .searchByProfileId('uplay', [
+    '4503086f-112e-41b6-bdbf-1c682596bab3' // Sub.Script
+    '3cc51897-49c4-45f6-af9d-66507b8ef0e1' // Beaulo.TSM
+    '36e684d7-5a57-42df-9b00-1c60e7c91f28' // Achieved.TSM
+  ])
+  */
+  .then((profiles) => {
+    console.log(profiles.toArray());
+  })
 ```
 
 Output:
@@ -195,13 +199,14 @@ If the user has connected other platforms (like steam, twitch, etc.) to its Ubis
 In the example below, you can see that Fabian and I connected our Steam account to our Ubisoft account.
 
 ```JavaScript
-ubisoft.searchByUserId([
-        '4503086f-112e-41b6-bdbf-1c682596bab3', // Sub.Script
-        '9cf4d4a1-e328-49f8-be77-c255d6efefaa', // Fabian.Vitality
-    ])
-    .then((profiles) => {
-        console.log(profiles.toArray());
-    })
+ubisoft
+  .searchByUserId([
+    '4503086f-112e-41b6-bdbf-1c682596bab3', // Sub.Script
+    '9cf4d4a1-e328-49f8-be77-c255d6efefaa', // Fabian.Vitality
+  ])
+  .then((profiles) => {
+    console.log(profiles.toArray());
+  })
 ```
 
 Output:
@@ -258,11 +263,11 @@ So, I highly recommend you to validate the responses after each call.
 Siege Progress:
 ```JavaScript
 ubisoft.searchByUsername('uplay', 'Sub.Script')
-    .then((profiles) => {
-        profiles.siege.progress().then(data => {
-            console.log(data.first());
-        })
+  .then((profiles) => {
+    profiles.siege.progress().then(data => {
+      console.log(data.first());
     })
+  })
 ```
 Output:
 ```JSON
