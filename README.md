@@ -24,12 +24,12 @@ To access this data, you must provide some Ubisoft accounts (at least one accoun
 Remember that two-step verification of the accounts must be **disabled**. Otherwise, this package won't work.
 
 > **Do not** use your primary Ubisoft account.
-> 
-> If you **improperly** use API calls, your account might get a temporary penalty or permanent ban.
-> 
+
+If you **improperly** use API calls, your account might get a temporary penalty or permanent ban.
+
 > We strongly recommend that you **create a new fake account**.
-> 
-> **We take no responsibility** for anything that might happen to the provided accounts in the future.
+
+**We take no responsibility** for anything that might happen to the provided accounts in the future.
 
 The Ubisoft APIs that we use in this package **are not stable**. Your application might suddenly break if Ubisoft changes something in the future, so you must always keep your application up-to-date.
 
@@ -57,22 +57,22 @@ There are multiple **third-party** non-open source websites/services out there t
 ### ⬇️ Installation
 Using npm:
 ```bash
-$ npm install ...
+$ npm install ubisoft-api
 ```
 
 Using yarn:
 ```bash
-$ yarn add ...
+$ yarn add ubisoft-api
 ```
 
 ### 🔧 Configuration
 We highly recommend you to use [TypeScript](https://www.typescriptlang.org/) instead of CommonJS.
 ```JavaScript
 // CommonJS
-// const Ubisoft = require('...');
+// const Ubisoft = require('ubisoft-api');
  
 // ES6
-import Ubisoft from '...';
+import Ubisoft from 'ubisoft-api';
 
 const ubisoft = new Ubisoft({
     accounts: [
