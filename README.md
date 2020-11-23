@@ -1,4 +1,10 @@
-A handy package to extract Data from Ubisoft services by reverse-engineering their public web APIs.
+A handy npm package to extract data from Ubisoft services by reverse-engineering their public web APIs.
+
+<p align="center">
+    <img alt="npm" src="https://img.shields.io/npm/dt/ubisoft-api?color=blue&logo=npm">
+    <img alt="NPM" src="https://img.shields.io/npm/l/ubisoft-api?color=blue&logo=open-source-initiative&logoColor=white">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/scrip7/ubisoft-api?color=blue&logo=github">
+</p>
 
 ## 📋 Table of contents
 - [Introduction](#-introduction)
