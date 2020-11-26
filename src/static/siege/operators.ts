@@ -10,7 +10,6 @@ enum Role {
     // Should sort
     ANCHOR = "anchor",
     COVERING_FIRE = "covering-fire",
-    CROWD_CONTROL = "crowd-control",
     INTEL_GATHERER = "intel-gatherer",
     INTEL_DENIER = "intel-denier",
     AREA_DENIAL = "area-denial",
@@ -33,6 +32,7 @@ enum Role {
     SHIELD = "shield",
     ANTI_ROAM = "anti-roam",
     BUFF = "buff", // Rook, Doc and Finka (for now)
+    CROWD_CONTROL = "crowd-control",
 }
 
 enum Gadget {
@@ -376,10 +376,32 @@ const OPERATORS: SiegeOperator[] = [
     },
 
     // JTF2 Attack
-    // TODO: Buck
+    {
+        name: "Buck",
+        slug: "buck",
+        position: Position.ATTACKER,
+        loadouts: {
+            primary: [Primary.C8_SFW, Primary.CAMRS],
+            secondary: [Secondary.MK1_9MM],
+            gadgets: [Gadget.CLAYMORE, Gadget.STUN_GRENADE],
+            ability: "skeleton-key",
+        },
+        roles: [Role.FLANK, Role.SOFT_BREACH],
+    },
 
     // JTF2 Defend
-    // TODO: Frost
+    {
+        name: "Frost",
+        slug: "frost",
+        position: Position.DEFENDER,
+        loadouts: {
+            primary: [Primary.SUPER_90, Primary._9MM_C1],
+            secondary: [Secondary.MK1_9MM, Secondary.ITA12S],
+            gadgets: [Gadget.BULLETPROOF_CAMERA, Gadget.DEPLOYABLE_SHIELD],
+            ability: "welcome-mate", // I'm aware that it's welcome "mat", not sure why Ubisoft API returns "mate"
+        },
+        roles: [Role.CROWD_CONTROL, Role.TRAP],
+    },
 
     // Navy SEALs Attack
     // TODO: Blackbeard

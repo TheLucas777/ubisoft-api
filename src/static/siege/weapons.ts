@@ -26,18 +26,24 @@ export enum Primary {
     AK_12 = "ak-12",
     _6P41 = "6p41",
     BALLISTIC_SHIELD = "ballistic-shield", // Fuze's shield
-    _9X19VSN = '9x19vsn',
-    SASG_12 = 'sasg-12',
-    DP27 = 'dp27',
+    _9X19VSN = "9x19vsn",
+    SASG_12 = "sasg-12",
+    DP27 = "dp27",
 
     // GSG 9
-    G52_TACTICAL_SHIELD = 'g52-tactical-shield', // Blitz's shield
-    AUG_A2 = 'aug-a2',
-    _552_COMMANDO = '552-commando',
-    G8A1 = 'g8a1',
-    M870 = 'm870',
-    _416_C_CARBINE = '416-c-carbine',
-    MP7 = 'mp7',
+    G52_TACTICAL_SHIELD = "g52-tactical-shield", // Blitz's shield
+    AUG_A2 = "aug-a2",
+    _552_COMMANDO = "552-commando",
+    G8A1 = "g8a1",
+    M870 = "m870",
+    _416_C_CARBINE = "416-c-carbine",
+    MP7 = "mp7",
+
+    // JTF2
+    C8_SFW = "c8-sfw",
+    CAMRS = "camrs",
+    SUPER_90 = "super-90",
+    _9MM_C1 = "9mm-c1",
 }
 
 export enum Secondary {
@@ -59,7 +65,11 @@ export enum Secondary {
     GSH_18 = "gsh-18",
 
     // GSG 9
-    P12 = 'p12',
+    P12 = "p12",
+
+    // JTF2
+    MK1_9MM = "mk1-9mm",
+    ITA12S = "ita12s",
 }
 
 // TODO: create weapons class
