@@ -194,7 +194,7 @@ Output:
 
 > **Note:** By using this method, we will return an optional "connections" property.
 
-If the user has connected other platforms (like steam, twitch, etc.) to its Ubisoft account, this property will contain information.
+If the user has linked other third-party platforms (like Steam) to its Ubisoft account, this property will contain all the information about those platforms.
 
 In the example below, you can see that Fabian and I connected our Steam account to our Ubisoft account.
 
