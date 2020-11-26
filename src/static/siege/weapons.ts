@@ -35,6 +35,9 @@ export enum Primary {
     AUG_A2 = 'aug-a2',
     _552_COMMANDO = '552-commando',
     G8A1 = 'g8a1',
+    M870 = 'm870',
+    _416_C_CARBINE = '416-c-carbine',
+    MP7 = 'mp7',
 }
 
 export enum Secondary {

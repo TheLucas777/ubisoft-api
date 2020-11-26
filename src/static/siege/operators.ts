@@ -350,8 +350,30 @@ const OPERATORS: SiegeOperator[] = [
     },
 
     // GSG 9 Defend
-    // TODO: Jager
-    // TODO: Bandit
+    {
+        name: "Jäger",
+        slug: "jager",
+        position: Position.DEFENDER,
+        loadouts: {
+            primary: [Primary.M870, Primary._416_C_CARBINE],
+            secondary: [Secondary.P12],
+            gadgets: [Gadget.BARBED_WIRE, Gadget.BULLETPROOF_CAMERA],
+            ability: "active-defense-system",
+        },
+        roles: [Role.ROAM, Role.SECURE],
+    },
+    {
+        name: "Bandit",
+        slug: "bandit",
+        position: Position.DEFENDER,
+        loadouts: {
+            primary: [Primary.MP7, Primary.M870],
+            secondary: [Secondary.P12],
+            gadgets: [Gadget.BARBED_WIRE, Gadget.NITRO_CELL],
+            ability: "shock-wire",
+        },
+        roles: [Role.ANTI_HARD_BREACH, Role.ROAM, Role.SECURE],
+    },
 
     // JTF2 Attack
     // TODO: Buck
