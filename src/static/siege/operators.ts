@@ -39,10 +39,12 @@ enum Gadget {
     // Placable (Attackers)
     BREACH_CHARGE = 'breach-charge',
     CLAYMORE = 'claymore',
+    SECONDARY_BREACHER = 'secondary-breacher',
 
     // Throwable (Attackers)
     FRAG_GRENADE = 'frag-grenade',
     STUN_GRENADE = 'stun-grenade',
+    SMOKE_GRENADE = 'smoke-grenade',
 
     // Placable (Defenders)
     DEPLOYABLE_SHIELD = 'deployable-shield',
@@ -216,6 +218,34 @@ const OPERATORS: SiegeOperator[] = [
         },
         roles: [Role.INTEL_GATHERER, Role.ROAM],
     },
+
+    // GIGN Attack
+    {
+        name: 'Twitch',
+        slug: 'twitch',
+        position: Position.ATTACKER,
+        loadouts: {
+            primary: [Primary.F2, Primary._417, Primary.SG_CQB],
+            secondary: [Secondary.P9, Secondary.LFP586],
+            gadgets: [Gadget.BREACH_CHARGE, Gadget.CLAYMORE],
+            ability: 'shock-drones',
+        },
+        roles: [Role.BACK_LINE, Role.DISABLE, Role.FRONT_LINE, Role.INTEL_GATHERER],
+    },
+    {
+        name: 'Montagne',
+        slug: 'montagne',
+        position: Position.ATTACKER,
+        loadouts: {
+            primary: [Primary.LE_ROCK_SHIELD],
+            secondary: [Secondary.P9, Secondary.LFP586],
+            gadgets: [Gadget.SECONDARY_BREACHER, Gadget.SMOKE_GRENADE],
+            ability: 'le-rock-shield',
+        },
+        roles: [Role.SHIELD],
+    },
+
+    // GIGN Defend
 
     // {
     // 	name: '',

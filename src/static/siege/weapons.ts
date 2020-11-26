@@ -12,6 +12,12 @@ export enum Primary {
   M1014 = 'm1014',
   _556XI = '556xi',
   UMP45 = 'ump45',
+
+  // GIGN
+  F2 = 'f2',
+  _417 = '417',
+  SG_CQB = 'sg-cqb',
+  LE_ROCK_SHIELD = 'le-rock-shield' // Montagne's shield
 }
 
 export enum Secondary {
@@ -23,6 +29,10 @@ export enum Secondary {
   _5_7_USG = '5.7-usg',
   M45_MEUSOC = 'm45-meusoc',
   SUPER_SHORTY = 'super-shorty',
+
+  // GIGN
+  P9 = 'p9',
+  LFP586 = 'lfp586',
 }
 
 // TODO: create weapons class
