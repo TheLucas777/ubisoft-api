@@ -1,60 +1,60 @@
-import { Primary, Secondary } from './weapons';
-import { filter, find } from 'lodash';
+import { Primary, Secondary } from "./weapons";
+import { filter, find } from "lodash";
 
 enum Position {
-    ATTACKER = 'attacker',
-    DEFENDER = 'defender',
+    ATTACKER = "attacker",
+    DEFENDER = "defender",
 }
 
 enum Role {
     // Should sort
-    ANCHOR = 'anchor',
-    COVERING_FIRE = 'covering-fire',
-    CROWD_CONTROL = 'crowd-control',
-    INTEL_GATHERER = 'intel-gatherer',
-    INTEL_DENIER = 'intel-denier',
-    AREA_DENIAL = 'area-denial',
-    FRONT_LINE = 'front-line',
-    BACK_LINE = 'back-line',
-    SECURE = 'secure',
+    ANCHOR = "anchor",
+    COVERING_FIRE = "covering-fire",
+    CROWD_CONTROL = "crowd-control",
+    INTEL_GATHERER = "intel-gatherer",
+    INTEL_DENIER = "intel-denier",
+    AREA_DENIAL = "area-denial",
+    FRONT_LINE = "front-line",
+    BACK_LINE = "back-line",
+    SECURE = "secure",
 
     // Defenders
-    TRAP = 'trap',
-    ROAM = 'roam',
-    FLANK = 'flank',
-    ANTI_HARD_BREACH = 'anti-hard-breach',
+    TRAP = "trap",
+    ROAM = "roam",
+    FLANK = "flank",
+    ANTI_HARD_BREACH = "anti-hard-breach",
 
     // Attackers
-    HARD_BREACH = 'hard-breach',
-    SOFT_BREACH = 'soft-breach',
-    DISABLE = 'disable', // Disabling defender gadgets
+    HARD_BREACH = "hard-breach",
+    SOFT_BREACH = "soft-breach",
+    DISABLE = "disable", // Disabling defender gadgets
 
     // Both Attackers and Defenders
-    SHIELD = 'shield',
-    ANTI_ROAM = 'anti-roam',
-    BUFF = 'buff', // Rook, Doc and Finka (for now)
+    SHIELD = "shield",
+    ANTI_ROAM = "anti-roam",
+    BUFF = "buff", // Rook, Doc and Finka (for now)
 }
 
 enum Gadget {
     // Placable (Attackers)
-    BREACH_CHARGE = 'breach-charge',
-    CLAYMORE = 'claymore',
-    SECONDARY_BREACHER = 'secondary-breacher',
+    BREACH_CHARGE = "breach-charge",
+    CLAYMORE = "claymore",
+    SECONDARY_BREACHER = "secondary-breacher",
 
     // Throwable (Attackers)
-    FRAG_GRENADE = 'frag-grenade',
-    STUN_GRENADE = 'stun-grenade',
-    SMOKE_GRENADE = 'smoke-grenade',
+    FRAG_GRENADE = "frag-grenade",
+    STUN_GRENADE = "stun-grenade",
+    SMOKE_GRENADE = "smoke-grenade",
 
     // Placable (Defenders)
-    DEPLOYABLE_SHIELD = 'deployable-shield',
-    BARBED_WIRE = 'barbed-wire',
-    BULLETPROOF_CAMERA = 'bulletproof-camera',
+    DEPLOYABLE_SHIELD = "deployable-shield",
+    BARBED_WIRE = "barbed-wire",
+    BULLETPROOF_CAMERA = "bulletproof-camera",
 
     // Throwable (Defenders)
-    NITRO_CELL = 'nitro-cell',
-    PROXIMITY_ALARM = 'proximity-alarm',
-    IMPACT_GRENADE = 'impact-grenade',
+    NITRO_CELL = "nitro-cell",
+    PROXIMITY_ALARM = "proximity-alarm",
+    IMPACT_GRENADE = "impact-grenade",
 }
 
 type SiegeOperator = {
@@ -109,14 +109,14 @@ type SiegeOperator = {
 const OPERATORS: SiegeOperator[] = [
     // SAS Attack
     {
-        name: 'Sledge',
-        slug: 'sledge',
+        name: "Sledge",
+        slug: "sledge",
         position: Position.ATTACKER,
         loadouts: {
             primary: [Primary.L85A2, Primary.M590A1],
             secondary: [Secondary.P226_MK_25, Secondary.SMG_11],
             gadgets: [Gadget.FRAG_GRENADE, Gadget.STUN_GRENADE],
-            ability: 'tactical-breaching-hammer',
+            ability: "tactical-breaching-hammer",
         },
         roles: [Role.FLANK, Role.SOFT_BREACH],
         armor: 2,
@@ -124,123 +124,123 @@ const OPERATORS: SiegeOperator[] = [
         profile: {
             height: 192,
             weight: 95,
-            realName: 'Seamus Cowden',
-            birthDate: new Date('2 April 1982'),
+            realName: "Seamus Cowden",
+            birthDate: new Date("2 April 1982"),
         },
     },
     {
-        name: 'Thatcher',
-        slug: 'thatcher',
+        name: "Thatcher",
+        slug: "thatcher",
         position: Position.ATTACKER,
         loadouts: {
             primary: [Primary.AR33, Primary.L85A2, Primary.M590A1],
             secondary: [Secondary.P226_MK_25],
             gadgets: [Gadget.BREACH_CHARGE, Gadget.CLAYMORE],
-            ability: 'emp-grenade',
+            ability: "emp-grenade",
         },
         roles: [Role.BACK_LINE, Role.DISABLE],
     },
 
     // SAS Defend
     {
-        name: 'Smoke',
-        slug: 'smoke',
+        name: "Smoke",
+        slug: "smoke",
         position: Position.DEFENDER,
         loadouts: {
             primary: [Primary.M590A1, Primary.FMG_9],
             secondary: [Secondary.P226_MK_25, Secondary.SMG_11],
             gadgets: [Gadget.DEPLOYABLE_SHIELD, Gadget.BARBED_WIRE],
-            ability: 'remote-gas-grenade',
+            ability: "remote-gas-grenade",
         },
         roles: [Role.ANCHOR, Role.AREA_DENIAL, Role.SECURE],
     },
     {
-        name: 'Mute',
-        slug: 'mute',
+        name: "Mute",
+        slug: "mute",
         position: Position.DEFENDER,
         loadouts: {
             primary: [Primary.MP5K, Primary.M590A1],
             secondary: [Secondary.P226_MK_25, Secondary.SMG_11],
             gadgets: [Gadget.BULLETPROOF_CAMERA, Gadget.NITRO_CELL],
-            ability: 'signal-disruptor',
+            ability: "signal-disruptor",
         },
         roles: [Role.ANTI_HARD_BREACH, Role.INTEL_DENIER, Role.SECURE],
     },
 
     // FBI Attack
     {
-        name: 'Ash',
-        slug: 'ash',
+        name: "Ash",
+        slug: "ash",
         position: Position.ATTACKER,
         loadouts: {
             primary: [Primary.G36C, Primary.R4_C],
             secondary: [Secondary._5_7_USG, Secondary.M45_MEUSOC],
             gadgets: [Gadget.BREACH_CHARGE, Gadget.STUN_GRENADE],
-            ability: 'breaching-rounds',
+            ability: "breaching-rounds",
         },
         roles: [Role.DISABLE, Role.FLANK, Role.FRONT_LINE, Role.SOFT_BREACH],
     },
     {
-        name: 'Thermite',
-        slug: 'thermite',
+        name: "Thermite",
+        slug: "thermite",
         position: Position.ATTACKER,
         loadouts: {
             primary: [Primary.M1014, Primary._556XI],
             secondary: [Secondary._5_7_USG, Secondary.M45_MEUSOC],
             gadgets: [Gadget.CLAYMORE, Gadget.STUN_GRENADE],
-            ability: 'exothermic-charge',
+            ability: "exothermic-charge",
         },
         roles: [Role.BACK_LINE, Role.HARD_BREACH],
     },
 
     // FBI Defend
     {
-        name: 'Castle',
-        slug: 'castle',
+        name: "Castle",
+        slug: "castle",
         position: Position.DEFENDER,
         loadouts: {
             primary: [Primary.UMP45, Primary.M1014],
             secondary: [Secondary._5_7_USG, Secondary.SUPER_SHORTY],
             gadgets: [Gadget.PROXIMITY_ALARM, Gadget.IMPACT_GRENADE],
-            ability: 'armor-panel',
+            ability: "armor-panel",
         },
         roles: [Role.ANCHOR, Role.SECURE],
     },
     {
-        name: 'Pulse',
-        slug: 'pulse',
+        name: "Pulse",
+        slug: "pulse",
         position: Position.DEFENDER,
         loadouts: {
             primary: [Primary.UMP45, Primary.M1014],
             secondary: [Secondary._5_7_USG, Secondary.M45_MEUSOC],
             gadgets: [Gadget.BARBED_WIRE, Gadget.NITRO_CELL],
-            ability: 'heartbeat-sensor',
+            ability: "heartbeat-sensor",
         },
         roles: [Role.INTEL_GATHERER, Role.ROAM],
     },
 
     // GIGN Attack
     {
-        name: 'Twitch',
-        slug: 'twitch',
+        name: "Twitch",
+        slug: "twitch",
         position: Position.ATTACKER,
         loadouts: {
             primary: [Primary.F2, Primary._417, Primary.SG_CQB],
             secondary: [Secondary.P9, Secondary.LFP586],
             gadgets: [Gadget.BREACH_CHARGE, Gadget.CLAYMORE],
-            ability: 'shock-drones',
+            ability: "shock-drones",
         },
         roles: [Role.BACK_LINE, Role.DISABLE, Role.FRONT_LINE, Role.INTEL_GATHERER],
     },
     {
-        name: 'Montagne',
-        slug: 'montagne',
+        name: "Montagne",
+        slug: "montagne",
         position: Position.ATTACKER,
         loadouts: {
             primary: [Primary.LE_ROCK_SHIELD],
             secondary: [Secondary.P9, Secondary.LFP586],
             gadgets: [Gadget.SECONDARY_BREACHER, Gadget.SMOKE_GRENADE],
-            ability: 'le-rock-shield',
+            ability: "le-rock-shield",
         },
         roles: [Role.SHIELD],
     },
