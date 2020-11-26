@@ -324,8 +324,30 @@ const OPERATORS: SiegeOperator[] = [
     },
 
     // GSG 9 Attack
-    // TODO: BLitz
-    // TODO: IQ
+    {
+        name: "Blitz",
+        slug: "blitz",
+        position: Position.ATTACKER,
+        loadouts: {
+            primary: [Primary.G52_TACTICAL_SHIELD],
+            secondary: [Secondary.P12],
+            gadgets: [Gadget.SMOKE_GRENADE, Gadget.BREACH_CHARGE],
+            ability: "flash-shield",
+        },
+        roles: [Role.ANTI_ROAM, Role.CROWD_CONTROL, Role.FRONT_LINE, Role.SHIELD],
+    },
+    {
+        name: "IQ",
+        slug: "iq",
+        position: Position.ATTACKER,
+        loadouts: {
+            primary: [Primary.AUG_A2, Primary._552_COMMANDO, Primary.G8A1],
+            secondary: [Secondary.P12],
+            gadgets: [Gadget.BREACH_CHARGE, Gadget.CLAYMORE],
+            ability: "electronics-detector",
+        },
+        roles: [Role.DISABLE, Role.FLANK, Role.FRONT_LINE, Role.INTEL_GATHERER],
+    },
 
     // GSG 9 Defend
     // TODO: Jager

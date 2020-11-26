@@ -28,7 +28,13 @@ export enum Primary {
     BALLISTIC_SHIELD = "ballistic-shield", // Fuze's shield
     _9X19VSN = '9x19vsn',
     SASG_12 = 'sasg-12',
-    DP27 = 'dp27'
+    DP27 = 'dp27',
+
+    // GSG 9
+    G52_TACTICAL_SHIELD = 'g52-tactical-shield', // Blitz's shield
+    AUG_A2 = 'aug-a2',
+    _552_COMMANDO = '552-commando',
+    G8A1 = 'g8a1',
 }
 
 export enum Secondary {
@@ -48,6 +54,9 @@ export enum Secondary {
     // Spetsnaz
     PMM = "pmm",
     GSH_18 = "gsh-18",
+
+    // GSG 9
+    P12 = 'p12',
 }
 
 // TODO: create weapons class
