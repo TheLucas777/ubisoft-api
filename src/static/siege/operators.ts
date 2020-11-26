@@ -404,10 +404,32 @@ const OPERATORS: SiegeOperator[] = [
     },
 
     // Navy SEALs Attack
-    // TODO: Blackbeard
+    {
+        name: "Blackbeard",
+        slug: "blackbeard",
+        position: Position.ATTACKER,
+        loadouts: {
+            primary: [Primary.MK17_CQB, Primary.SR_25],
+            secondary: [Secondary.D_50],
+            gadgets: [Gadget.BREACH_CHARGE, Gadget.STUN_GRENADE],
+            ability: "rifle-shield",
+        },
+        roles: [Role.BACK_LINE, Role.COVERING_FIRE, Role.SHIELD],
+    },
 
     // Navy SEALs Defend
-    // TODO: Valkyrie
+    {
+        name: "Valkyrie",
+        slug: "valkyrie",
+        position: Position.DEFENDER,
+        loadouts: {
+            primary: [Primary.MPX, Primary.SPAS_12],
+            secondary: [Secondary.D_50],
+            gadgets: [Gadget.DEPLOYABLE_SHIELD, Gadget.NITRO_CELL],
+            ability: "black-eye",
+        },
+        roles: [Role.INTEL_GATHERER, Role.ROAM],
+    },
 
     // BOPE Attack
     // TODO: Capitao

@@ -44,6 +44,12 @@ export enum Primary {
     CAMRS = "camrs",
     SUPER_90 = "super-90",
     _9MM_C1 = "9mm-c1",
+
+    // Navy SEALs
+    MK17_CQB = "mk17-cqb",
+    SR_25 = "sr-25",
+    MPX = "mpx",
+    SPAS_12 = "spas-12",
 }
 
 export enum Secondary {
@@ -70,6 +76,9 @@ export enum Secondary {
     // JTF2
     MK1_9MM = "mk1-9mm",
     ITA12S = "ita12s",
+
+    // Navy SEALs
+    D_50 = "d-50",
 }
 
 // TODO: create weapons class
