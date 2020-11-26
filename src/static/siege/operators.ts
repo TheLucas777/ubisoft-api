@@ -272,8 +272,30 @@ const OPERATORS: SiegeOperator[] = [
     },
 
     // Spetsnaz Attack
-    // TODO: Glaz
-    // TODO: Fuze
+    {
+        name: "Glaz",
+        slug: "glaz",
+        position: Position.ATTACKER,
+        loadouts: {
+            primary: [Primary.OTS_3],
+            secondary: [Secondary.PMM, Secondary.GSH_18],
+            gadgets: [Gadget.SMOKE_GRENADE, Gadget.FRAG_GRENADE],
+            ability: "flip-sight",
+        },
+        roles: [Role.BACK_LINE, Role.COVERING_FIRE, Role.SOFT_BREACH],
+    },
+    {
+        name: "Fuze",
+        slug: "fuze",
+        position: Position.ATTACKER,
+        loadouts: {
+            primary: [Primary.AK_12, Primary._6P41, Primary.BALLISTIC_SHIELD],
+            secondary: [Secondary.PMM, Secondary.GSH_18],
+            gadgets: [Gadget.BREACH_CHARGE, Gadget.SECONDARY_BREACHER],
+            ability: "cluster-charge",
+        },
+        roles: [Role.AREA_DENIAL, Role.DISABLE, Role.FLANK],
+    },
 
     // Spetsnaz Defend
     // TODO: Kapkan

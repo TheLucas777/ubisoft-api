@@ -20,6 +20,12 @@ export enum Primary {
     LE_ROCK_SHIELD = "le-rock-shield", // Montagne's shield
     MP5 = "mp5",
     P90 = "p90",
+
+    // Spetsnaz
+    OTS_3 = "ots-03",
+    AK_12 = "ak-12",
+    _6P41 = "6p41",
+    BALLISTIC_SHIELD = "ballistic-shield", // Fuze's shield
 }
 
 export enum Secondary {
@@ -35,6 +41,10 @@ export enum Secondary {
     // GIGN
     P9 = "p9",
     LFP586 = "lfp586",
+
+    // Spetsnaz
+    PMM = "pmm",
+    GSH_18 = "gsh-18",
 }
 
 // TODO: create weapons class
