@@ -26,6 +26,9 @@ export enum Primary {
     AK_12 = "ak-12",
     _6P41 = "6p41",
     BALLISTIC_SHIELD = "ballistic-shield", // Fuze's shield
+    _9X19VSN = '9x19vsn',
+    SASG_12 = 'sasg-12',
+    DP27 = 'dp27'
 }
 
 export enum Secondary {

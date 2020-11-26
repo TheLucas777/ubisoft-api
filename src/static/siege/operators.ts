@@ -298,8 +298,30 @@ const OPERATORS: SiegeOperator[] = [
     },
 
     // Spetsnaz Defend
-    // TODO: Kapkan
-    // TODO: Tachanka
+    {
+        name: "Kapkan",
+        slug: "kapkan",
+        position: Position.DEFENDER,
+        loadouts: {
+            primary: [Primary._9X19VSN, Primary.SASG_12],
+            secondary: [Secondary.PMM, Secondary.GSH_18],
+            gadgets: [Gadget.IMPACT_GRENADE, Gadget.NITRO_CELL],
+            ability: "entry-denial-device",
+        },
+        roles: [Role.TRAP],
+    },
+    {
+        name: "Tachanka",
+        slug: "tachanka",
+        position: Position.DEFENDER,
+        loadouts: {
+            primary: [Primary.DP27, Primary._9X19VSN],
+            secondary: [Secondary.PMM, Secondary.GSH_18],
+            gadgets: [Gadget.BARBED_WIRE, Gadget.PROXIMITY_ALARM],
+            ability: "shumikha-launcher",
+        },
+        roles: [Role.ANCHOR, Role.COVERING_FIRE],
+    },
 
     // GSG 9 Attack
     // TODO: BLitz
