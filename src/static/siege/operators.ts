@@ -51,6 +51,8 @@ enum Gadget {
 
     // Throwable (Defenders)
     NITRO_CELL = 'nitro-cell',
+    PROXIMITY_ALARM = 'proximity-alarm',
+    IMPACT_GRENADE = 'impact-grenade',
 }
 
 type SiegeOperator = {
@@ -190,6 +192,30 @@ const OPERATORS: SiegeOperator[] = [
     },
 
     // FBI Defend
+    {
+        name: 'Castle',
+        slug: 'castle',
+        position: Position.DEFENDER,
+        loadouts: {
+            primary: [Primary.UMP45, Primary.M1014],
+            secondary: [Secondary._5_7_USG, Secondary.SUPER_SHORTY],
+            gadgets: [Gadget.PROXIMITY_ALARM, Gadget.IMPACT_GRENADE],
+            ability: 'armor-panel',
+        },
+        roles: [Role.ANCHOR, Role.SECURE],
+    },
+    {
+        name: 'Pulse',
+        slug: 'pulse',
+        position: Position.DEFENDER,
+        loadouts: {
+            primary: [Primary.UMP45, Primary.M1014],
+            secondary: [Secondary._5_7_USG, Secondary.M45_MEUSOC],
+            gadgets: [Gadget.BARBED_WIRE, Gadget.NITRO_CELL],
+            ability: 'heartbeat-sensor',
+        },
+        roles: [Role.INTEL_GATHERER, Role.ROAM],
+    },
 
     // {
     // 	name: '',

@@ -10,7 +10,8 @@ export enum Primary {
   G36C = 'g36c',
   R4_C = 'r4-c',
   M1014 = 'm1014',
-  _556XI = '556xi'
+  _556XI = '556xi',
+  UMP45 = 'ump45',
 }
 
 export enum Secondary {
@@ -21,6 +22,7 @@ export enum Secondary {
   // FBI
   _5_7_USG = '5.7-usg',
   M45_MEUSOC = 'm45-meusoc',
+  SUPER_SHORTY = 'super-shorty',
 }
 
 // TODO: create weapons class
