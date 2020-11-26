@@ -50,7 +50,7 @@ enum Gadget {
     BULLETPROOF_CAMERA = 'bulletproof-camera',
 
     // Throwable (Defenders)
-    NITRO_CELL = 'nitro-cell'
+    NITRO_CELL = 'nitro-cell',
 }
 
 type SiegeOperator = {
@@ -139,8 +139,8 @@ const OPERATORS: SiegeOperator[] = [
 
     // SAS Defend
     {
-    	name: 'Smoke',
-    	slug: 'smoke',
+        name: 'Smoke',
+        slug: 'smoke',
         position: Position.DEFENDER,
         loadouts: {
             primary: [Primary.M590A1, Primary.FMG_9],
@@ -148,15 +148,11 @@ const OPERATORS: SiegeOperator[] = [
             gadgets: [Gadget.DEPLOYABLE_SHIELD, Gadget.BARBED_WIRE],
             ability: 'remote-gas-grenade',
         },
-        roles: [
-            Role.ANCHOR,
-            Role.AREA_DENIAL,
-            Role.SECURE
-        ],
+        roles: [Role.ANCHOR, Role.AREA_DENIAL, Role.SECURE],
     },
     {
-    	name: 'Mute',
-    	slug: 'mute',
+        name: 'Mute',
+        slug: 'mute',
         position: Position.DEFENDER,
         loadouts: {
             primary: [Primary.MP5K, Primary.M590A1],
@@ -164,17 +160,36 @@ const OPERATORS: SiegeOperator[] = [
             gadgets: [Gadget.BULLETPROOF_CAMERA, Gadget.NITRO_CELL],
             ability: 'signal-disruptor',
         },
-        roles: [
-            Role.ANTI_HARD_BREACH,
-            Role.INTEL_DENIER,
-            Role.SECURE
-        ],
+        roles: [Role.ANTI_HARD_BREACH, Role.INTEL_DENIER, Role.SECURE],
     },
 
     // FBI Attack
+    {
+        name: 'Ash',
+        slug: 'ash',
+        position: Position.ATTACKER,
+        loadouts: {
+            primary: [Primary.G36C, Primary.R4_C],
+            secondary: [Secondary._5_7_USG, Secondary.M45_MEUSOC],
+            gadgets: [Gadget.BREACH_CHARGE, Gadget.STUN_GRENADE],
+            ability: 'breaching-rounds',
+        },
+        roles: [Role.DISABLE, Role.FLANK, Role.FRONT_LINE, Role.SOFT_BREACH],
+    },
+    {
+        name: 'Thermite',
+        slug: 'thermite',
+        position: Position.ATTACKER,
+        loadouts: {
+            primary: [Primary.M1014, Primary._556XI],
+            secondary: [Secondary._5_7_USG, Secondary.M45_MEUSOC],
+            gadgets: [Gadget.CLAYMORE, Gadget.STUN_GRENADE],
+            ability: 'exothermic-charge',
+        },
+        roles: [Role.BACK_LINE, Role.HARD_BREACH],
+    },
 
     // FBI Defend
-
 
     // {
     // 	name: '',
