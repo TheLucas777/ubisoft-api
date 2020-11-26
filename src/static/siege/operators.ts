@@ -432,10 +432,32 @@ const OPERATORS: SiegeOperator[] = [
     },
 
     // BOPE Attack
-    // TODO: Capitao
+    {
+        name: "CAPITÃO",
+        slug: "capitao",
+        position: Position.ATTACKER,
+        loadouts: {
+            primary: [Primary.PARA_308, Primary.M249],
+            secondary: [Secondary.PRB92],
+            gadgets: [Gadget.CLAYMORE, Gadget.SECONDARY_BREACHER],
+            ability: "tactical-crossbow",
+        },
+        roles: [Role.AREA_DENIAL, Role.FLANK, Role.FRONT_LINE],
+    },
 
     // BOPE Defend
-    // TODO: Caveira
+    {
+        name: "Caveira",
+        slug: "caveira",
+        position: Position.DEFENDER,
+        loadouts: {
+            primary: [Primary.M12, Primary.SPAS_15],
+            secondary: [Secondary.LUISON],
+            gadgets: [Gadget.PROXIMITY_ALARM, Gadget.IMPACT_GRENADE],
+            ability: "silent-step",
+        },
+        roles: [Role.INTEL_DENIER, Role.INTEL_GATHERER, Role.ROAM],
+    },
 
     // SAT Attack
     // TODO: Hibana
