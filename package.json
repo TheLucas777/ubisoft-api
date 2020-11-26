@@ -33,7 +33,8 @@
     "axios": "^0.21.0",
     "https-proxy-agent": "^5.0.0",
     "lodash": "^4.17.20",
-    "lowdb": "^1.0.0"
+    "lowdb": "^1.0.0",
+    "map-factory": "^3.8.3"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.165",
@@ -44,8 +45,8 @@
   },
   "prettier": {
     "parser": "typescript",
-    "tabWidth": 2,
-    "useTabs": true,
+    "tabWidth": 4,
+    "useTabs": false,
     "singleQuote": true,
     "semi": true,
     "printWidth": 120,
