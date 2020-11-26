@@ -18,6 +18,8 @@ export enum Primary {
     _417 = "417",
     SG_CQB = "sg-cqb",
     LE_ROCK_SHIELD = "le-rock-shield", // Montagne's shield
+    MP5 = "mp5",
+    P90 = "p90",
 }
 
 export enum Secondary {

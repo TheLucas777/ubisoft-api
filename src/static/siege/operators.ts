@@ -246,11 +246,173 @@ const OPERATORS: SiegeOperator[] = [
     },
 
     // GIGN Defend
+    {
+        name: "Doc",
+        slug: "doc",
+        position: Position.DEFENDER,
+        loadouts: {
+            primary: [Primary.MP5, Primary.P90, Primary.SG_CQB],
+            secondary: [Secondary.P9, Secondary.LFP586],
+            gadgets: [Gadget.BULLETPROOF_CAMERA, Gadget.BARBED_WIRE],
+            ability: "stim-pistol",
+        },
+        roles: [Role.ANCHOR, Role.BUFF],
+    },
+    {
+        name: "Rook",
+        slug: "rook",
+        position: Position.DEFENDER,
+        loadouts: {
+            primary: [Primary.MP5, Primary.P90, Primary.SG_CQB],
+            secondary: [Secondary.P9, Secondary.LFP586],
+            gadgets: [Gadget.PROXIMITY_ALARM, Gadget.IMPACT_GRENADE],
+            ability: "armor-pack",
+        },
+        roles: [Role.ANCHOR, Role.BUFF],
+    },
+
+    // Spetsnaz Attack
+    // TODO: Glaz
+    // TODO: Fuze
+
+    // Spetsnaz Defend
+    // TODO: Kapkan
+    // TODO: Tachanka
+
+    // GSG 9 Attack
+    // TODO: BLitz
+    // TODO: IQ
+
+    // GSG 9 Defend
+    // TODO: Jager
+    // TODO: Bandit
+
+    // JTF2 Attack
+    // TODO: Buck
+
+    // JTF2 Defend
+    // TODO: Frost
+
+    // Navy SEALs Attack
+    // TODO: Blackbeard
+
+    // Navy SEALs Defend
+    // TODO: Valkyrie
+
+    // BOPE Attack
+    // TODO: Capitao
+
+    // BOPE Defend
+    // TODO: Caveira
+
+    // SAT Attack
+    // TODO: Hibana
+
+    // SAT Defend
+    // TODO: Echo
+
+    // GEO Attack
+    // TODO: Jackal
+
+    // GEO Defend
+    // TODO: Mira
+
+    // SDU Attack
+    // TODO: Ying
+
+    // SDU Defend
+    // TODO: Lesion
+
+    // GROM Attack
+    // TODO: Zofia
+
+    // GROM Defend
+    // TODO: Ela
+
+    // 707th SMB Attack
+    // TODO: Dokkaebi
+
+    // 707th SMB Defend
+    // TODO: Vigil
+
+    // CBRN Attack
+    // TODO: Lion
+    // TODO: Finka
+
+    // GIS Defend
+    // TODO: Maestro
+    // TODO: Alibi
+
+    // GSUTR Attack
+    // TODO: Maverick
+
+    // GSUTR Defend
+    // TODO: Clash
+
+    // GIGR Attack
+    // TODO: Nomad
+
+    // GIGR Defend
+    // TODO: Kaid
+
+    // SASR Attack
+    // TODO: Gridlock
+
+    // SASR Defend
+    // TODO: Mozzie
+
+    // Jaeger Corps Attack
+    // TODO: Nokk
+
+    // Secret Service Defend
+    // TODO: Warden
+
+    // APCA Attack
+    // TODO: Amaru
+
+    // FES Defend
+    // TODO: Goyo
+
+    // NIGHTHAVEN Attack
+    // TODO: Kali
+
+    // NIGHTHAVEN Defend
+    // TODO: Wamai
+
+    // REU Attack
+    // TODO: Iana
+
+    // GIGR (unofficially) Defend
+    // TODO: Oryx
+
+    // NIGHTHAVEN Attack
+    // TODO: Ace
+
+    // ITF Defend
+    // TODO: Melusi
+
+    // ROS Attack
+    // TODO: Zero
+
+    // NIGHTHAVEN Defend
+    // TODO: Aruni
 
     // {
     // 	name: '',
     // 	slug: '',
     //     position: Position.ATTACKER,
+    //     loadouts: {
+    //         primary: [],
+    //         secondary: [],
+    //         gadgets: [],
+    //         ability: '',
+    //     },
+    //     roles: [],
+    // },
+    // {
+    // 	name: '',
+    // 	slug: '',
+    //     position: Position.DEFENDER,
     //     loadouts: {
     //         primary: [],
     //         secondary: [],
@@ -267,7 +429,9 @@ export class Operators {
 
     static findBySlug(slug: string): SiegeOperator {
         const result = find(OPERATORS, { slug: slug });
-        if (result) return result;
+        if (result) {
+            return result;
+        }
         throw new Error(`Could not find any operator with provided slug [${slug}]`);
     }
 }
