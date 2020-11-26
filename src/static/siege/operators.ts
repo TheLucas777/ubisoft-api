@@ -171,6 +171,9 @@ const OPERATORS: SiegeOperator[] = [
         ],
     },
 
+    // FBI Attack
+
+    // FBI Defend
 
 
     // {
@@ -188,10 +191,10 @@ const OPERATORS: SiegeOperator[] = [
 ];
 
 export class Operators {
-    static readonly attackers: Operators[] = filter(OPERATORS, { position: Position.ATTACKER });
-    static readonly defenders: Operators[] = filter(OPERATORS, { position: Position.DEFENDER });
+    static readonly attackers: SiegeOperator[] = filter(OPERATORS, { position: Position.ATTACKER });
+    static readonly defenders: SiegeOperator[] = filter(OPERATORS, { position: Position.DEFENDER });
 
-    static findBySlug(slug: string) {
+    static findBySlug(slug: string): SiegeOperator {
         const result = find(OPERATORS, { slug: slug });
         if (result) return result;
         throw new Error(`Could not find any operator with provided slug [${slug}]`);
