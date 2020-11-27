@@ -488,10 +488,32 @@ const OPERATORS: SiegeOperator[] = [
     },
 
     // GEO Attack
-    // TODO: Jackal
+    {
+        name: "Jackal",
+        slug: "jackal",
+        position: Position.ATTACKER,
+        loadouts: {
+            primary: [Primary.C7E, Primary.PDW9, Primary.ITA12L],
+            secondary: [Secondary.USP40, Secondary.ITA12S],
+            gadgets: [Gadget.CLAYMORE, Gadget.STUN_GRENADE],
+            ability: "eyenox-model-iii",
+        },
+        roles: [Role.ANTI_ROAM, Role.INTEL_GATHERER],
+    },
 
     // GEO Defend
-    // TODO: Mira
+    {
+        name: "Mira",
+        slug: "mira",
+        position: Position.DEFENDER,
+        loadouts: {
+            primary: [Primary.VECTOR_45_ACP, Primary.ITA12L],
+            secondary: [Secondary.USP40, Secondary.ITA12S],
+            gadgets: [Gadget.PROXIMITY_ALARM, Gadget.NITRO_CELL],
+            ability: "black-mirror",
+        },
+        roles: [Role.ANCHOR, Role.INTEL_GATHERER, Role.SECURE],
+    },
 
     // SDU Attack
     // TODO: Ying
