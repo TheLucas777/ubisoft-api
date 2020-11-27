@@ -7,11 +7,14 @@ A handy npm package to extract data from Ubisoft services by reverse-engineering
     <a href="https://github.com/Scrip7/ubisoft-api/blob/main/LICENSE" target="_blank">
         <img alt="ubisoft-api license" src="https://img.shields.io/npm/l/ubisoft-api?color=blue&logo=open-source-initiative&logoColor=white">
     </a>
+    <a href="https://app.codacy.com/gh/Scrip7/ubisoft-api">
+        <img src="https://api.codacy.com/project/badge/Grade/efd2e9428b89473bbab8261f558ff453"/>
+    </a>
     <a href="https://github.com/Scrip7/ubisoft-api/commits/">
         <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/scrip7/ubisoft-api?color=blue&logo=github">
     </a>
-    <a href="https://app.codacy.com/gh/Scrip7/ubisoft-api">
-        <img src="https://api.codacy.com/project/badge/Grade/efd2e9428b89473bbab8261f558ff453"/>
+    <a href="https://twitter.com/intent/user?screen_name=Skr1p7">
+        <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/skr1p7?color=blue&logo=twitter&logoColor=white&style=flat-square">
     </a>
 </p>
 
