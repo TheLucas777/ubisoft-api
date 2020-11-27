@@ -792,10 +792,32 @@ const OPERATORS: SiegeOperator[] = [
     },
 
     // NIGHTHAVEN Attack
-    // TODO: Kali
+    {
+        name: "Kali",
+        slug: "kali",
+        position: Position.ATTACKER,
+        loadouts: {
+            primary: [Primary.CSRX_300],
+            secondary: [Secondary.SPSMG9, Secondary.C75_AUTO],
+            gadgets: [Gadget.BREACH_CHARGE, Gadget.CLAYMORE],
+            ability: "lv-explosive-lance",
+        },
+        roles: [Role.BACK_LINE, Role.COVERING_FIRE, Role.DISABLE],
+    },
 
     // NIGHTHAVEN Defend
-    // TODO: Wamai
+    {
+        name: "Wamai",
+        slug: "wamai",
+        position: Position.DEFENDER,
+        loadouts: {
+            primary: [Primary.AUG_A2, Primary.MP5K],
+            secondary: [Secondary.D_40, Secondary.P12],
+            gadgets: [Gadget.PROXIMITY_ALARM, Gadget.DEPLOYABLE_SHIELD],
+            ability: "mag-net-system",
+        },
+        roles: [Role.ANCHOR, Role.SECURE],
+    },
 
     // REU Attack
     // TODO: Iana

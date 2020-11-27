@@ -110,6 +110,9 @@ export enum Primary {
     M249_SAW = "m249-saw",
     COMMANDO_9 = "commando-9",
     P10_RONI = "p10-roni",
+
+    // NIGHTHAVEN
+    CSRX_300 = "csrx-300", // Kali
 }
 
 export enum Secondary {
@@ -175,6 +178,9 @@ export enum Secondary {
 
     // SASR
     SDP_9MM = "sdp-9mm",
+
+    // NIGHTHAVEN
+    D_40 = "d-40",
 }
 
 // TODO: create weapons class
