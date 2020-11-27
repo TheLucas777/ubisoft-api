@@ -848,16 +848,60 @@ const OPERATORS: SiegeOperator[] = [
     },
 
     // NIGHTHAVEN Attack
-    // TODO: Ace
+    {
+        name: "Ace",
+        slug: "ace",
+        position: Position.ATTACKER,
+        loadouts: {
+            primary: [Primary.AK_12, Primary.M1014],
+            secondary: [Secondary.P9],
+            gadgets: [Gadget.BREACH_CHARGE, Gadget.SMOKE_GRENADE],
+            ability: "selma-aqua-breacher",
+        },
+        roles: [Role.FRONT_LINE, Role.HARD_BREACH],
+    },
 
     // ITF Defend
-    // TODO: Melusi
+    {
+        name: "Melusi",
+        slug: "melusi",
+        position: Position.DEFENDER,
+        loadouts: {
+            primary: [Primary.MP5, Primary.SUPER_90],
+            secondary: [Secondary.RG15],
+            gadgets: [Gadget.IMPACT_GRENADE, Gadget.NITRO_CELL],
+            ability: "banshee",
+        },
+        roles: [Role.CROWD_CONTROL, Role.INTEL_GATHERER, Role.SECURE],
+    },
 
     // ROS Attack
-    // TODO: Zero
+    {
+        name: "Zero",
+        slug: "zero",
+        position: Position.ATTACKER,
+        loadouts: {
+            primary: [Primary.SC3000K, Primary.MP7],
+            secondary: [Secondary._5_7_USG],
+            gadgets: [Gadget.FRAG_GRENADE, Gadget.CLAYMORE],
+            ability: "argus-launcher",
+        },
+        roles: [Role.INTEL_DENIER, Role.INTEL_GATHERER],
+    },
 
     // NIGHTHAVEN Defend
-    // TODO: Aruni
+    {
+        name: "Aruni",
+        slug: "aruni",
+        position: Position.DEFENDER,
+        loadouts: {
+            primary: [Primary.P10_RONI, Primary.MK_14_EBR],
+            secondary: [Secondary.PRB92],
+            gadgets: [Gadget.PROXIMITY_ALARM, Gadget.BARBED_WIRE],
+            ability: "surya-gate",
+        },
+        roles: [Role.SECURE, Role.INTEL_GATHERER, Role.ANCHOR],
+    },
 
     // {
     //     name: "",

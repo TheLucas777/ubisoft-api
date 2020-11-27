@@ -113,6 +113,9 @@ export enum Primary {
 
     // NIGHTHAVEN
     CSRX_300 = "csrx-300", // Kali
+
+    // ROS
+    SC3000K = "sc3000k",
 }
 
 export enum Secondary {
