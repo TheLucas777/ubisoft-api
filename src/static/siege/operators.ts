@@ -25,7 +25,6 @@ enum Role {
 
     // Attackers
     HARD_BREACH = "hard-breach",
-    SOFT_BREACH = "soft-breach",
     DISABLE = "disable", // Disabling defender gadgets
 
     // Both Attackers and Defenders
@@ -33,6 +32,7 @@ enum Role {
     ANTI_ROAM = "anti-roam",
     BUFF = "buff", // Rook, Doc and Finka (for now)
     CROWD_CONTROL = "crowd-control",
+    SOFT_BREACH = "soft-breach", // Thx to Oryx now it's for Both XD
 }
 
 enum Gadget {
@@ -820,10 +820,32 @@ const OPERATORS: SiegeOperator[] = [
     },
 
     // REU Attack
-    // TODO: Iana
+    {
+        name: "Iana",
+        slug: "iana",
+        position: Position.ATTACKER,
+        loadouts: {
+            primary: [Primary.ARX200, Primary.G36C],
+            secondary: [Secondary.MK1_9MM],
+            gadgets: [Gadget.FRAG_GRENADE, Gadget.SMOKE_GRENADE],
+            ability: "gemini-replicator",
+        },
+        roles: [Role.INTEL_DENIER, Role.INTEL_GATHERER],
+    },
 
-    // GIGR (unofficially) Defend
-    // TODO: Oryx
+    // GIGR (Unaffiliated) Defend
+    {
+        name: "Oryx",
+        slug: "oryx",
+        position: Position.DEFENDER,
+        loadouts: {
+            primary: [Primary.SPAS_12, Primary.T_5_SMG],
+            secondary: [Secondary.BAILIFF_410, Secondary.USP40],
+            gadgets: [Gadget.BARBED_WIRE, Gadget.PROXIMITY_ALARM],
+            ability: "remah-dash",
+        },
+        roles: [Role.ROAM, Role.SOFT_BREACH],
+    },
 
     // NIGHTHAVEN Attack
     // TODO: Ace
