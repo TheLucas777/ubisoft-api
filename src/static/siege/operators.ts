@@ -572,10 +572,32 @@ const OPERATORS: SiegeOperator[] = [
     },
 
     // 707th SMB Attack
-    // TODO: Dokkaebi
+    {
+        name: "Dokkaebi",
+        slug: "dokkaebi",
+        position: Position.ATTACKER,
+        loadouts: {
+            primary: [Primary.MK_14_EBR, Primary.BOSG_12_2],
+            secondary: [Secondary.C75_AUTO, Secondary.SMG_12],
+            gadgets: [Gadget.SMOKE_GRENADE, Gadget.STUN_GRENADE],
+            ability: "logic-bomb",
+        },
+        roles: [Role.ANTI_ROAM, Role.FLANK, Role.INTEL_GATHERER, Role.INTEL_DENIER],
+    },
 
     // 707th SMB Defend
-    // TODO: Vigil
+    {
+        name: "Vigil",
+        slug: "vigil",
+        position: Position.DEFENDER,
+        loadouts: {
+            primary: [Primary.K1A, Primary.BOSG_12_2],
+            secondary: [Secondary.C75_AUTO, Secondary.SMG_12],
+            gadgets: [Gadget.BULLETPROOF_CAMERA, Gadget.IMPACT_GRENADE],
+            ability: "erc-7",
+        },
+        roles: [Role.INTEL_DENIER, Role.ROAM],
+    },
 
     // CBRN Attack
     // TODO: Lion

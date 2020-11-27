@@ -79,6 +79,11 @@ export enum Primary {
     M762 = "m762",
     SCORPION_EVO_3_A1 = "scorpion-evo-3-a1",
     F0_12 = "f0-12",
+
+    // 707th SMB
+    MK_14_EBR = "mk-14-ebr",
+    BOSG_12_2 = "bosg-12-2",
+    K1A = "k1a",
 }
 
 export enum Secondary {
@@ -125,6 +130,10 @@ export enum Secondary {
 
     // GROM
     RG15 = "rg15",
+
+    // 707th SMB
+    C75_AUTO = "c75-auto",
+    SMG_12 = "smg-12",
 }
 
 // TODO: create weapons class
