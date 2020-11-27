@@ -652,10 +652,32 @@ const OPERATORS: SiegeOperator[] = [
     },
 
     // GSUTR Attack
-    // TODO: Maverick
+    {
+        name: "Maverick",
+        slug: "maverick",
+        position: Position.ATTACKER,
+        loadouts: {
+            primary: [Primary.AR_15_50, Primary.M4],
+            secondary: [Secondary._1911_TACOPS],
+            gadgets: [Gadget.FRAG_GRENADE, Gadget.CLAYMORE],
+            ability: "breaching-torch",
+        },
+        roles: [Role.BACK_LINE, Role.DISABLE, Role.FLANK, Role.HARD_BREACH],
+    },
 
     // GSUTR Defend
-    // TODO: Clash
+    {
+    	name: 'Clash',
+    	slug: 'clash',
+        position: Position.DEFENDER,
+        loadouts: {
+            primary: [Primary.CCE_SHIELD],
+            secondary: [Secondary.P_10C, Secondary.SPSMG9],
+            gadgets: [Gadget.BARBED_WIRE, Gadget.IMPACT_GRENADE],
+            ability: 'cce-shield',
+        },
+        roles: [Role.CROWD_CONTROL, Role.INTEL_GATHERER, Role.SECURE, Role.SHIELD],
+    },
 
     // GIGR Attack
     // TODO: Nomad
@@ -706,26 +728,26 @@ const OPERATORS: SiegeOperator[] = [
     // TODO: Aruni
 
     // {
-    // 	name: '',
-    // 	slug: '',
+    //     name: "",
+    //     slug: "",
     //     position: Position.ATTACKER,
     //     loadouts: {
     //         primary: [],
     //         secondary: [],
     //         gadgets: [],
-    //         ability: '',
+    //         ability: "",
     //     },
     //     roles: [],
     // },
     // {
-    // 	name: '',
-    // 	slug: '',
+    //     name: "",
+    //     slug: "",
     //     position: Position.DEFENDER,
     //     loadouts: {
     //         primary: [],
     //         secondary: [],
     //         gadgets: [],
-    //         ability: '',
+    //         ability: "",
     //     },
     //     roles: [],
     // },

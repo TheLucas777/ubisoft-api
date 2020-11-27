@@ -93,6 +93,11 @@ export enum Primary {
     ALDA_5_56 = "alda-5.56",
     ACS12 = "acs12",
     MX4_STORM = "mx4-storm",
+
+    // GSUTR
+    AR_15_50 = "ar-15-50",
+    M4 = "m4",
+    CCE_SHIELD = "cce-shield", // Clash's shield
 }
 
 export enum Secondary {
@@ -147,6 +152,11 @@ export enum Secondary {
     // GIS
     KERATOS_357 = "keratos-357",
     BAILIFF_410 = "bailiff-410",
+
+    // GSUTR
+    _1911_TACOPS = "1911-tacops",
+    P_10C = "p-10c",
+    SPSMG9 = "spsmg9",
 }
 
 // TODO: create weapons class
