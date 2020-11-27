@@ -736,10 +736,32 @@ const OPERATORS: SiegeOperator[] = [
     },
 
     // Jaeger Corps Attack
-    // TODO: Nokk
+    {
+        name: "NØKK",
+        slug: "nokk",
+        position: Position.ATTACKER,
+        loadouts: {
+            primary: [Primary.FMG_9, Primary.SIX12_SD],
+            secondary: [Secondary._5_7_USG, Secondary.D_50],
+            gadgets: [Gadget.SECONDARY_BREACHER, Gadget.FRAG_GRENADE],
+            ability: "hel-presence-reduction",
+        },
+        roles: [Role.FLANK, Role.INTEL_DENIER],
+    },
 
     // Secret Service Defend
-    // TODO: Warden
+    {
+        name: "Warden",
+        slug: "warden",
+        position: Position.DEFENDER,
+        loadouts: {
+            primary: [Primary.M590A1, Primary.MPX],
+            secondary: [Secondary.P_10C, Secondary.SMG_12],
+            gadgets: [Gadget.DEPLOYABLE_SHIELD, Gadget.NITRO_CELL],
+            ability: "glance-smart-glasses",
+        },
+        roles: [Role.ANCHOR, Role.INTEL_DENIER],
+    },
 
     // APCA Attack
     // TODO: Amaru
