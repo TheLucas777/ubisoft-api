@@ -84,6 +84,10 @@ export enum Primary {
     MK_14_EBR = "mk-14-ebr",
     BOSG_12_2 = "bosg-12-2",
     K1A = "k1a",
+
+    // CBRN
+    V308 = "v308",
+    SPEAR_308 = "spear-308",
 }
 
 export enum Secondary {

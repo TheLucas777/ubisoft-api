@@ -600,8 +600,30 @@ const OPERATORS: SiegeOperator[] = [
     },
 
     // CBRN Attack
-    // TODO: Lion
-    // TODO: Finka
+    {
+        name: "Lion",
+        slug: "lion",
+        position: Position.ATTACKER,
+        loadouts: {
+            primary: [Primary.V308, Primary._417, Primary.SG_CQB],
+            secondary: [Secondary.P9, Secondary.LFP586],
+            gadgets: [Gadget.STUN_GRENADE, Gadget.SECONDARY_BREACHER],
+            ability: "ee-one-d",
+        },
+        roles: [Role.ANTI_ROAM, Role.BACK_LINE, Role.CROWD_CONTROL, Role.INTEL_GATHERER],
+    },
+    {
+        name: "Finka",
+        slug: "finka",
+        position: Position.ATTACKER,
+        loadouts: {
+            primary: [Primary.SPEAR_308, Primary._6P41, Primary.SASG_12],
+            secondary: [Secondary.PMM, Secondary.GSH_18],
+            gadgets: [Gadget.SECONDARY_BREACHER, Gadget.FRAG_GRENADE],
+            ability: "adrenal-surge",
+        },
+        roles: [Role.BACK_LINE, Role.BUFF],
+    },
 
     // GIS Defend
     // TODO: Maestro
