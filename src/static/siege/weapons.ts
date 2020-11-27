@@ -104,6 +104,12 @@ export enum Primary {
     ARX200 = "arx200",
     AUG_A3 = "aug-a3",
     TCSG12 = "tcsg12",
+
+    // SASR
+    F90 = "f90",
+    M249_SAW = "m249-saw",
+    COMMANDO_9 = "commando-9",
+    P10_RONI = "p10-roni",
 }
 
 export enum Secondary {
@@ -165,7 +171,10 @@ export enum Secondary {
     SPSMG9 = "spsmg9",
 
     // GIGR
-    _44_mag_semi_auto = "-44-mag-semi-auto" // Because it's ".44 mag", Ubisoft API puts "dash" at the beginning
+    _44_mag_semi_auto = "-44-mag-semi-auto", // Because it's ".44 mag", Ubisoft API puts "dash" at the beginning
+
+    // SASR
+    SDP_9MM = "sdp-9mm",
 }
 
 // TODO: create weapons class

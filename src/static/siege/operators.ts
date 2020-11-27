@@ -708,10 +708,32 @@ const OPERATORS: SiegeOperator[] = [
     },
 
     // SASR Attack
-    // TODO: Gridlock
+    {
+        name: "Gridlock",
+        slug: "gridlock",
+        position: Position.ATTACKER,
+        loadouts: {
+            primary: [Primary.F90, Primary.M249_SAW],
+            secondary: [Secondary.SUPER_SHORTY, Secondary.SDP_9MM],
+            gadgets: [Gadget.SMOKE_GRENADE, Gadget.BREACH_CHARGE],
+            ability: "trax-stingers",
+        },
+        roles: [Role.ANTI_ROAM, Role.AREA_DENIAL, Role.CROWD_CONTROL],
+    },
 
     // SASR Defend
-    // TODO: Mozzie
+    {
+        name: "Mozzie",
+        slug: "mozzie",
+        position: Position.DEFENDER,
+        loadouts: {
+            primary: [Primary.COMMANDO_9, Primary.P10_RONI],
+            secondary: [Secondary.SDP_9MM],
+            gadgets: [Gadget.BARBED_WIRE, Gadget.NITRO_CELL],
+            ability: "pest-launcher",
+        },
+        roles: [Role.INTEL_DENIER, Role.INTEL_GATHERER, Role.SECURE],
+    },
 
     // Jaeger Corps Attack
     // TODO: Nokk
