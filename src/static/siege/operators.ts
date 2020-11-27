@@ -764,10 +764,32 @@ const OPERATORS: SiegeOperator[] = [
     },
 
     // APCA Attack
-    // TODO: Amaru
+    {
+        name: "Amaru",
+        slug: "amaru",
+        position: Position.ATTACKER,
+        loadouts: {
+            primary: [Primary.G8A1, Primary.SUPERNOVA],
+            secondary: [Secondary.ITA12S, Secondary.SMG_11],
+            gadgets: [Gadget.STUN_GRENADE, Gadget.SECONDARY_BREACHER],
+            ability: "garra-hook",
+        },
+        roles: [Role.FLANK, Role.FRONT_LINE],
+    },
 
     // FES Defend
-    // TODO: Goyo
+    {
+        name: "Goyo",
+        slug: "goyo",
+        position: Position.DEFENDER,
+        loadouts: {
+            primary: [Primary.VECTOR_45_ACP, Primary.TCSG12],
+            secondary: [Secondary.P229],
+            gadgets: [Gadget.PROXIMITY_ALARM, Gadget.NITRO_CELL],
+            ability: "volcan-shield",
+        },
+        roles: [Role.AREA_DENIAL, Role.SECURE],
+    },
 
     // NIGHTHAVEN Attack
     // TODO: Kali
