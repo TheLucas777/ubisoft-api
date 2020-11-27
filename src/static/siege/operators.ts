@@ -460,10 +460,32 @@ const OPERATORS: SiegeOperator[] = [
     },
 
     // SAT Attack
-    // TODO: Hibana
+    {
+        name: "Hibana",
+        slug: "hibana",
+        position: Position.ATTACKER,
+        loadouts: {
+            primary: [Primary.TYPE_89, Primary.SUPERNOVA],
+            secondary: [Secondary.P229, Secondary.BEARING_9],
+            gadgets: [Gadget.STUN_GRENADE, Gadget.BREACH_CHARGE],
+            ability: "x-kairos",
+        },
+        roles: [Role.BACK_LINE, Role.FRONT_LINE, Role.HARD_BREACH],
+    },
 
     // SAT Defend
-    // TODO: Echo
+    {
+        name: "Echo",
+        slug: "echo",
+        position: Position.DEFENDER,
+        loadouts: {
+            primary: [Primary.MP5SD, Primary.SUPERNOVA],
+            secondary: [Secondary.P229, Secondary.BEARING_9],
+            gadgets: [Gadget.IMPACT_GRENADE, Gadget.BARBED_WIRE],
+            ability: "yokai",
+        },
+        roles: [Role.ANCHOR, Role.CROWD_CONTROL, Role.INTEL_GATHERER, Role.SECURE],
+    },
 
     // GEO Attack
     // TODO: Jackal

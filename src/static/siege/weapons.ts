@@ -57,6 +57,10 @@ export enum Primary {
     M12 = "m12",
     SPAS_15 = "spas-15",
 
+    // SAT
+    TYPE_89 = "type-89",
+    SUPERNOVA = "supernova",
+    MP5SD = "mp5sd",
 }
 
 export enum Secondary {
@@ -90,6 +94,10 @@ export enum Secondary {
     // BOPE
     PRB92 = "prb92",
     LUISON = "luison",
+
+    // SAT
+    P229 = "p229",
+    BEARING_9 = "bearing-9",
 }
 
 // TODO: create weapons class
