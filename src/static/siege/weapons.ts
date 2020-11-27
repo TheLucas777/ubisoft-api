@@ -67,6 +67,12 @@ export enum Primary {
     PDW9 = "pdw9",
     ITA12L = "ita12l",
     VECTOR_45_ACP = "vector-45-acp",
+
+    // SDU
+    T_95_LSW = "t-95-lsw",
+    SIX12 = "six12",
+    SIX12_SD = "six12-sd",
+    T_5_SMG = "t-5-smg"
 }
 
 export enum Secondary {
@@ -107,6 +113,9 @@ export enum Secondary {
 
     // GEO
     USP40 = "usp40",
+
+    // SDU
+    Q_929 = "q-929",
 }
 
 // TODO: create weapons class

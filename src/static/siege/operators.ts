@@ -516,10 +516,32 @@ const OPERATORS: SiegeOperator[] = [
     },
 
     // SDU Attack
-    // TODO: Ying
+    {
+        name: "Ying",
+        slug: "ying",
+        position: Position.ATTACKER,
+        loadouts: {
+            primary: [Primary.T_95_LSW, Primary.SIX12],
+            secondary: [Secondary.Q_929],
+            gadgets: [Gadget.SECONDARY_BREACHER, Gadget.SMOKE_GRENADE],
+            ability: "candela",
+        },
+        roles: [Role.CROWD_CONTROL, Role.FRONT_LINE],
+    },
 
     // SDU Defend
-    // TODO: Lesion
+    {
+        name: "Lesion",
+        slug: "lesion",
+        position: Position.DEFENDER,
+        loadouts: {
+            primary: [Primary.SIX12_SD, Primary.T_5_SMG],
+            secondary: [Secondary.Q_929],
+            gadgets: [Gadget.IMPACT_GRENADE, Gadget.BULLETPROOF_CAMERA],
+            ability: "gu-mines",
+        },
+        roles: [Role.ANCHOR, Role.CROWD_CONTROL, Role.INTEL_GATHERER, Role.ROAM, Role.TRAP],
+    },
 
     // GROM Attack
     // TODO: Zofia
