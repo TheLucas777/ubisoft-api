@@ -1,6 +1,7 @@
 import { last } from "lodash";
+import { find } from "lodash";
 
-type SiegeSeasonType = {
+type Season = {
     id: number;
     name: string;
     slug: string;
@@ -9,7 +10,7 @@ type SiegeSeasonType = {
     release: Date;
 };
 
-const SEASONS: SiegeSeasonType[] = [
+const SEASONS: Season[] = [
     // Year 1
     {
         id: 1,
@@ -181,7 +182,24 @@ const SEASONS: SiegeSeasonType[] = [
     // }
 ];
 
-export class SiegeSeason {
-    static readonly latestSeason: SiegeSeasonType = last(SEASONS)!;
-    static readonly latestSeasonId: number = last(SEASONS)!.id;
+export class Seasons {
+    static readonly all: Season[] = SEASONS;
+    static readonly latest: Season = last(SEASONS)!;
+    static readonly latestId: number = last(SEASONS)!.id;
+
+    static findBySlug(seasonSlug: string): Season {
+        const result = find(SEASONS, { slug: seasonSlug });
+        if (result) {
+            return result;
+        }
+        throw new Error(`Could not find any season with provided slug [${seasonSlug}]`);
+    }
+
+    static findByNotation(seasonNotation: string): Season {
+        const result = find(SEASONS, { notation: seasonNotation });
+        if (result) {
+            return result;
+        }
+        throw new Error(`Could not find any season with provided notation [${seasonNotation}]`);
+    }
 }
