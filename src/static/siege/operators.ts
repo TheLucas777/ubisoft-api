@@ -626,8 +626,30 @@ const OPERATORS: SiegeOperator[] = [
     },
 
     // GIS Defend
-    // TODO: Maestro
-    // TODO: Alibi
+    {
+        name: "Maestro",
+        slug: "maestro",
+        position: Position.DEFENDER,
+        loadouts: {
+            primary: [Primary.ALDA_5_56, Primary.ACS12],
+            secondary: [Secondary.KERATOS_357, Secondary.BAILIFF_410],
+            gadgets: [Gadget.BARBED_WIRE, Gadget.IMPACT_GRENADE],
+            ability: "evil-eye",
+        },
+        roles: [Role.ANCHOR, Role.AREA_DENIAL, Role.INTEL_GATHERER, Role.SECURE],
+    },
+    {
+        name: "Alibi",
+        slug: "alibi",
+        position: Position.DEFENDER,
+        loadouts: {
+            primary: [Primary.MX4_STORM, Primary.ACS12],
+            secondary: [Secondary.KERATOS_357, Secondary.BAILIFF_410],
+            gadgets: [Gadget.IMPACT_GRENADE, Gadget.DEPLOYABLE_SHIELD],
+            ability: "prisma",
+        },
+        roles: [Role.INTEL_DENIER, Role.INTEL_GATHERER, Role.ROAM, Role.TRAP],
+    },
 
     // GSUTR Attack
     // TODO: Maverick

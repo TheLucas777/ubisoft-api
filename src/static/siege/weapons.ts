@@ -88,6 +88,11 @@ export enum Primary {
     // CBRN
     V308 = "v308",
     SPEAR_308 = "spear-308",
+
+    // GIS
+    ALDA_5_56 = "alda-5.56",
+    ACS12 = "acs12",
+    MX4_STORM = "mx4-storm",
 }
 
 export enum Secondary {
@@ -138,6 +143,10 @@ export enum Secondary {
     // 707th SMB
     C75_AUTO = "c75-auto",
     SMG_12 = "smg-12",
+
+    // GIS
+    KERATOS_357 = "keratos-357",
+    BAILIFF_410 = "bailiff-410",
 }
 
 // TODO: create weapons class
