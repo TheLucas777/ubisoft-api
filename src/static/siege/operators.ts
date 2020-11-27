@@ -667,23 +667,45 @@ const OPERATORS: SiegeOperator[] = [
 
     // GSUTR Defend
     {
-    	name: 'Clash',
-    	slug: 'clash',
+        name: "Clash",
+        slug: "clash",
         position: Position.DEFENDER,
         loadouts: {
             primary: [Primary.CCE_SHIELD],
             secondary: [Secondary.P_10C, Secondary.SPSMG9],
             gadgets: [Gadget.BARBED_WIRE, Gadget.IMPACT_GRENADE],
-            ability: 'cce-shield',
+            ability: "cce-shield",
         },
         roles: [Role.CROWD_CONTROL, Role.INTEL_GATHERER, Role.SECURE, Role.SHIELD],
     },
 
     // GIGR Attack
-    // TODO: Nomad
+    {
+        name: "Nomad",
+        slug: "nomad",
+        position: Position.ATTACKER,
+        loadouts: {
+            primary: [Primary.AK_74M, Primary.ARX200],
+            secondary: [Secondary.PRB92, Secondary._44_mag_semi_auto],
+            gadgets: [Gadget.BREACH_CHARGE, Gadget.STUN_GRENADE],
+            ability: "airjab-launcher",
+        },
+        roles: [Role.ANTI_ROAM, Role.CROWD_CONTROL, Role.TRAP],
+    },
 
     // GIGR Defend
-    // TODO: Kaid
+    {
+        name: "Kaid",
+        slug: "kaid",
+        position: Position.DEFENDER,
+        loadouts: {
+            primary: [Primary.AUG_A3, Primary.TCSG12],
+            secondary: [Secondary._44_mag_semi_auto, Secondary.LFP586],
+            gadgets: [Gadget.BARBED_WIRE, Gadget.NITRO_CELL],
+            ability: "rtila-electroclaw",
+        },
+        roles: [Role.ANCHOR, Role.ANTI_HARD_BREACH, Role.SECURE],
+    },
 
     // SASR Attack
     // TODO: Gridlock

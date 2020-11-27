@@ -98,6 +98,12 @@ export enum Primary {
     AR_15_50 = "ar-15-50",
     M4 = "m4",
     CCE_SHIELD = "cce-shield", // Clash's shield
+
+    // GIGR
+    AK_74M = "ak-74m",
+    ARX200 = "arx200",
+    AUG_A3 = "aug-a3",
+    TCSG12 = "tcsg12",
 }
 
 export enum Secondary {
@@ -157,6 +163,9 @@ export enum Secondary {
     _1911_TACOPS = "1911-tacops",
     P_10C = "p-10c",
     SPSMG9 = "spsmg9",
+
+    // GIGR
+    _44_mag_semi_auto = "-44-mag-semi-auto" // Because it's ".44 mag", Ubisoft API puts "dash" at the beginning
 }
 
 // TODO: create weapons class
