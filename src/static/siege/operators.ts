@@ -544,10 +544,32 @@ const OPERATORS: SiegeOperator[] = [
     },
 
     // GROM Attack
-    // TODO: Zofia
+    {
+        name: "Zofia",
+        slug: "zofia",
+        position: Position.ATTACKER,
+        loadouts: {
+            primary: [Primary.LMG_E, Primary.M762],
+            secondary: [Secondary.RG15],
+            gadgets: [Gadget.BREACH_CHARGE, Gadget.CLAYMORE],
+            ability: "ks79-lifeline",
+        },
+        roles: [Role.ANTI_ROAM, Role.CROWD_CONTROL, Role.DISABLE, Role.FLANK, Role.SOFT_BREACH],
+    },
 
     // GROM Defend
-    // TODO: Ela
+    {
+        name: "Ela",
+        slug: "ela",
+        position: Position.DEFENDER,
+        loadouts: {
+            primary: [Primary.SCORPION_EVO_3_A1, Primary.F0_12],
+            secondary: [Secondary.RG15],
+            gadgets: [Gadget.BARBED_WIRE, Gadget.DEPLOYABLE_SHIELD],
+            ability: "grzmot-mine",
+        },
+        roles: [Role.CROWD_CONTROL, Role.ROAM, Role.TRAP],
+    },
 
     // 707th SMB Attack
     // TODO: Dokkaebi
@@ -644,6 +666,7 @@ const OPERATORS: SiegeOperator[] = [
 ];
 
 export class Operators {
+    static readonly all: SiegeOperator[] = OPERATORS;
     static readonly attackers: SiegeOperator[] = filter(OPERATORS, { position: Position.ATTACKER });
     static readonly defenders: SiegeOperator[] = filter(OPERATORS, { position: Position.DEFENDER });
 
