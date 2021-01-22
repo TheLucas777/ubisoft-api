@@ -114,10 +114,10 @@ lowdb@^1.0.0:
     pify "^3.0.0"
     steno "^0.4.1"
 
-map-factory@^3.8.4:
-  version "3.8.4"
-  resolved "https://registry.yarnpkg.com/map-factory/-/map-factory-3.8.4.tgz#0e59b462bd19c571816cb25984b8d6f23260ecc3"
-  integrity sha512-A1Cx/8tUYrWVdOF12L274uPSHk718AI/P0KtHGrQkH5Y8U+F+GnKSFCSztH1m51fjbZcCv+7VpfPsqAZlAtZ2w==
+map-factory@^3.8.5:
+  version "3.8.5"
+  resolved "https://registry.yarnpkg.com/map-factory/-/map-factory-3.8.5.tgz#6c9485d84594cbf0f04f8bc21a541fa46be05ccc"
+  integrity sha512-S1dFL+DbMFXrQG2nbQolrR2MxWJd61WVGxgekySHCVF17SuE+RjEXXskEwT9OnPiDy7C0/oB/uJ/lptRmZYF1A==
   dependencies:
     lodash.clonedeep "^4.5.0"
     lodash.compact "^3.0.1"

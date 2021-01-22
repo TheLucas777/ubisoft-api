@@ -34,7 +34,7 @@
     "https-proxy-agent": "^5.0.0",
     "lodash": "^4.17.20",
     "lowdb": "^1.0.0",
-    "map-factory": "^3.8.4"
+    "map-factory": "^3.8.5"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.168",
